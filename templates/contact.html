@@ -1,0 +1,81 @@
+ {% extends "layouts/jaikalki_layout.html" %}
+
+
+{% block meta %}
+    <meta name="description" content="Get in touch with GurutvaPay for secure online payment solutions. Contact our team for support, partnerships, and business inquiries.">
+    <meta name="keywords" content="contact GurutvaPay, GurutvaPay customer support, PSP support India, payment gateway customer care India, GurutvaPay helpdesk, merchant support India, payment integration support India, technical help PSP India, API support India, PSP contact number, online payment support India, card processing help India, UPI payment support India, business partnership PSP India, merchant queries GurutvaPay, fintech support India, settlement issue help India, refunds support PSP India, PSP complaints India, GurutvaPay business contact">
+
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact Us - GurutvaPay">
+    <meta property="og:description" content="Reach out to GurutvaPay for seamless online payment solutions, customer support, and business partnerships.">
+    <meta property="og:image" content="{{ url_for('static', filename='img/Gravity_logo.png', _external=True) }}">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:title" content="Contact Us - GurutvaPay">
+    <meta name="twitter:description" content="Reach out to GurutvaPay for seamless online payment solutions, customer support, and business partnerships.">
+
+    <!-- Canonical URL (Specific to Contact Page) -->
+    <link rel="canonical" href="https://www.gurutvapay.com/contact">
+
+    {% endblock %}
+
+{% block title %}Contact Us - GurutvaPay{% endblock %}
+
+
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<main class="main">
+
+    <!-- Page Title -->
+    <!--    <div class="page-title light-background">-->
+    <!--      <div class="container">-->
+    <!--        <h1>Contact Us</h1>-->
+    <!--        <nav class="breadcrumbs">-->
+    <!--          <ol>-->
+    <!--            <li><a href="/index.html">Home</a></li>-->
+    <!--            <li class="current">Contact Us</li>-->
+    <!--          </ol>-->
+    <!--        </nav>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!-- End Page Title -->
+
+    <!-- Starter Section Section -->
+
+    <section class="banner banner-contact contact-b">
+        <div class="container">
+            <div class="banner-content margin-top">
+                <div class="text">
+                    <h1>Get in Touch</h1>
+                    <p>Have questions or need assistance? We're here to help!
+                        Reach out to us for support, inquiries, or partnership opportunities.
+                        Let's simplify digital payments together!</p>
+
+                    <a href="#contact" class="btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+
+{% block javascripts %}
+<script>
+  document.getElementById("get-started-btn").addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent default link behavior
+      document.getElementById("contact-section").scrollIntoView({
+          behavior: "smooth"
+      });
+  });
+</script>
+{% endblock javascripts %}

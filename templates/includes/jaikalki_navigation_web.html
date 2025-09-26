@@ -1,0 +1,88 @@
+
+
+<header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+        <a href="{{ url_for('index') }}"
+           class="{% if segment == 'home' %} active {% endif %} logo d-flex align-items-center me-auto me-xl-0">
+            <img src="{{ url_for('static', filename='img/grutuvapay_logo.png') }}"
+                 alt="GurutvaPay - Secure and Reliable Payment Gateway Logo"
+                 class="img-fluid">
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li class="nav-item">
+                    <a href="{{ url_for('index') }}" class="nav-link {% if segment == 'home' %}active{% endif %}"
+                       data-aos="fade-up" data-aos-delay="50">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ url_for('about') }}" class="nav-link {% if segment == 'about' %} active {% endif %}"
+                       data-aos="fade-up" data-aos-delay="100">About</a>
+                </li>
+
+                <li class="nav-item dropdown flex-a">
+                    <a href="{{ url_for('services') }}" class="nav-link {% if segment == 'services' %} active {% endif %}"
+                       data-aos="fade-up" data-aos-delay="150" onclick="return false;">
+                        <span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+
+
+                        <li>
+                            <a href="services#p-c" class="dropdown-item" onclick="setActive('p-c')">Payment Collection</a>
+                        </li>
+                        <li>
+                            <a href="services#p-d" class="dropdown-item" onclick="setActive('p-d')">Payment Disbursement</a>
+                        </li>
+                        <li>
+                            <a href="services#s-d" class="dropdown-item" onclick="setActive('s-d')">Software Development</a>
+                        </li>
+                        <li>
+                            <a href="services#api" class="dropdown-item" onclick="setActive('api')">API Integration</a>
+                        </li>
+
+                         <li>
+
+                               <a href="/foreign-remittance" class="dropdown-item">Foreign Remittance</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ url_for('blog') }}" class="nav-link {% if segment == 'blog' %} active {% endif %}"
+                       data-aos="fade-up" data-aos-delay="200">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ url_for('contact') }}"
+                       class="nav-link {% if segment == 'contact' %} active {% endif %} " data-aos="fade-up"
+                       data-aos-delay="250">Contact Us</a>
+                </li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="btn-getstarted" href="https://dashboard.gurutvapay.com/login" target="_blank">Login</a>
+    </div>
+</header>
+
+
+<script>
+  function setActive(id) {
+    // Remove active from all tab buttons
+    const buttons = document.querySelectorAll('.ser-tab-item');
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    // Add active to the targeted button
+    const target = document.getElementById(id);
+    if (target) {
+      target.classList.add('active');
+
+      // Optionally trigger the onclick functionality
+      target.click(); // Optional: simulate the click behavior
+    }
+  }
+</script>
+

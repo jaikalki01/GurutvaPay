@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Default Meta Tags (Applied Globally) -->
+<!--    <meta name="author" content="GurutvaPay">-->
+<!--    <meta name="description"-->
+<!--          content="GurutvaPay is a secure and reliable payment gateway solution for businesses. Get instant settlements, low transaction fees, and easy integration.">-->
+<!--    <meta name="keywords" content="payment gateway, online payments, UPI payments, fintech, merchant services">-->
+<!--    <meta name="robots" content="index, follow">-->
+<!--    <meta name="googlebot" content="index, follow">-->
+<!--    <meta name="bingbot" content="index, follow">-->
+<!--    <meta name="rating" content="general">-->
+<!--    <link rel="canonical" href="https://www.gurutvapay.com/">-->
+
+    <!-- Open Graph (Default for All Pages) -->
+<!--    <meta property="og:title" content="GurutvaPay - Secure & Fast Payment Gateway">-->
+<!--    <meta property="og:description" content="Accept online payments seamlessly with GurutvaPay's fintech solutions.">-->
+<!--    <meta property="og:image" content="{{ url_for('static', filename='img/Gravity_logo.png', _external=True) }}">-->
+<!--    <meta property="og:site_name" content="GurutvaPay">-->
+<!--    <meta property="og:url" content="{{ request.url }}">-->
+<!--    <meta property="og:type" content="website">-->
+<!--    <meta property="og:locale" content="en_US">-->
+
+    <!-- Twitter Meta Tags -->
+<!--    <meta name="twitter:card" content="summary_large_image">-->
+<!--    <meta name="twitter:title" content="GurutvaPay - Secure & Fast Payment Gateway">-->
+<!--    <meta name="twitter:description" content="Accept online payments seamlessly with GurutvaPay's fintech solutions.">-->
+<!--    <meta name="twitter:image" content="{{ url_for('static', filename='img/Gravity_logo.png', _external=True) }}">-->
+
+
+    <!-- Page-Specific Meta (To Be Overridden in Each Page) -->
+
+
+
+
+
+    {% block meta %}{% endblock %}
+
+    <!-- Page Title -->
+    <title>{% block title %}GurutvaPay - Secure Payment solution{% endblock %}</title>
+
+
+    <!-- Favicons -->
+    {% block stylesheets %}
+
+    {% endblock stylesheets %}
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/apple-touch-icon.png') }}">
+
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+
+
+
+<!--    font awesome cdn-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--  Favicon -->
+
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+
+    <!-- Vendor CSS Files -->
+    <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-548FDL7F');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="google-site-verification" content="B7XlrI5Ae7cspHDGOXSHdWYHXztUZjaOS1ksufADC98"/>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V2ZEFGWE5Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-V2ZEFGWE5Q');
+    </script>
+
+
+    <!-- website schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "GurutvaPay",
+            "url": "https://www.gurutvapay.com/",
+            "description": "GurutvaPay is a secure and reliable payment solution for businesses.",
+            "publisher": {
+                "@type": "Organization",
+                "name": "GurutvaPay",
+                "logo": "https://www.gurutvapay.com/assets/images/logo.png"
+            }
+        }
+    </script>
+
+    <!-----------  Breadcrumb Schema ---------->
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://gurutvapay.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "About Us",
+                    "item": "https://gurutvapay.com/about"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Services",
+                    "item": "https://gurutvapay.com/services"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "Contact",
+                    "item": "https://gurutvapay.com/contact"
+                }
+            ]
+        }
+
+    </script>
+
+
+    <!-----------  FAQ Schema ---------->
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What is GurutvaPay?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "GurutvaPay is a Payment solution that provides seamless online payment processing for businesses."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How can I integrate GurutvaPay with my website?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "You can integrate GurutvaPay using our REST API, which is designed for easy implementation with various platforms."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is GurutvaPay secure?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, GurutvaPay ensures secure transactions with advanced encryption and fraud prevention measures."
+                    }
+                }
+            ]
+        }
+
+    </script>
+
+
+    <!-----------  Business Info Schema ---------->
+
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FinancialService",
+            "name": "GurutvaPay",
+            "image": "https://gurutvapay.com/logo.png",
+            "@id": "https://gurutvapay.com",
+            "url": "https://gurutvapay.com",
+            "telephone": "+91 2235039927",
+            "email": "info@gurutvapay.com",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Sh N B1/A Grd Flr Mahavir, Ngr, Deepak Hospital",
+                "addressLocality": "Mira Road",
+                "addressRegion": "Thane",
+                "addressCountry": "IN",
+                "postalCode": "401107"
+            },
+            "sameAs": [
+                "https://www.facebook.com/JaikalkiTechnologyPvtLtd/",
+                "https://www.instagram.com/jaikalki_technology_pvt_ltd/",
+                "https://www.linkedin.com/company/jaikalki-technology/"
+            ]
+        }
+
+    </script>
+</head>
+
+<body class="index-page">
+
+{% include 'includes/jaikalki_navigation_web.html' %}
+
+{% block content %}
+
+{% endblock content %}
+{% include 'includes/jaikalki_contact_call_to_action_web.html'%}
+
+{% include 'includes/jaikalki_footer_web.html' %}
+
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+{% include 'includes/scripts_jaikalki.html' %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
+
+</body>
+
+</html>

@@ -1,0 +1,419 @@
+{% extends "layouts/jaikalki_layout.html" %}
+
+
+{% block meta %}
+    <meta name="description" content="Discover GurutvaPay's secure and reliable online payment solutions. We offer UPI payments, merchant services, and fast settlements for businesses.">
+    <meta name="keywords" content="payment gateway services, UPI payments, merchant services, fast settlements, online payment solutions">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Our Services - GurutvaPay Payment Solutions">
+    <meta property="og:description" content="Explore our secure and fast online payment solutions, including UPI payments, merchant services, and seamless transactions.">
+    <meta property="og:image" content="{{ url_for('static', filename='img/Gravity_logo.png', _external=True) }}">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:title" content="Our Services - GurutvaPay Payment Solutions">
+    <meta name="twitter:description" content="Explore our secure and fast online payment solutions, including UPI payments, merchant services, and seamless transactions.">
+ 
+    <!-- Canonical URL (Specific to Services Page) -->
+    <link rel="canonical" href="https://www.gurutvapay.com/services">
+
+    {% endblock %}
+
+{% block title %}Our Services - GurutvaPay{% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<main class="main">
+
+    <!--    banner section starts here-->
+
+    <section class="banner banner-services contact-p" alt="Integrated Digital Marketing Strategy">
+        <div class="container">
+            <div class="banner-content">
+                <div class="text">
+                    <h3 data-aos="zoom-out" data-aos-delay="300">Our Services</h3>
+                    <h1 data-aos="zoom-out" data-aos-delay="400">Fast, Secure, and Scalable Payment Solutions</h1>
+                    <p data-aos="zoom-out" data-aos-delay="500">Powering seamless digital transactions with secure,
+                        fast, and scalable payment solutions. Explore our range of services designed to help your
+                        business grow.</p>
+                    <a href="contact" class="btn" data-aos="fade-up" data-aos-delay="600">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- service tabs start here -->
+
+
+    <section class="container my-5 ser-tab-container">
+        <div class="row align-items-center">
+            <!-- Left Side - Tabs -->
+            <div class="col-md-4">
+                <div class="list-group ser-tab-list-group">
+                    <button class="list-group-item ser-tab-item active shadow-none no-outline"
+                            onclick="serTabShow(event, 'ser-tab-payment-collection')" id="p-c">
+                        <i class="bi bi-list-check"></i> Payment Collection
+                    </button>
+                    <button class="list-group-item ser-tab-item"
+                            onclick="serTabShow(event, 'ser-tab-payment-disbursement')" id="p-d">
+                        <i class="bi bi-arrow-left-right"></i> Payment Disbursement
+                    </button>
+                    <button class="list-group-item ser-tab-item"
+                            onclick="serTabShow(event, 'ser-tab-software-development')" id="s-d">
+                        <i class="bi bi-code-slash"></i> Software Development
+                    </button>
+                    <button class="list-group-item ser-tab-item" onclick="serTabShow(event, 'ser-tab-api-integration')" id="api">
+                        <i class="bi bi-plug"></i> API Integration
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Side - Content -->
+            <div class="col-md-8 align-items-center">
+                <div class="ser-tab-content">
+                    <!-- Payment Collection -->
+                    <div id="ser-tab-payment-collection" class="ser-tab-panel active">
+                        <div class="row align-items-center">
+                            <div class="col-md-5 ">
+                                <img data-aos="zoom-out" data-aos-delay="500"
+                                     src="{{ url_for('static', filename='img/payment-collection.png') }}"
+                                     class="img-fluid rounded" alt="Payment Collection">
+                            </div>
+                            <div class="col-md-7">
+                                <h2 id="head-1">Secure Payment Collection</h2>
+                                <p>Ensure safe and hassle-free payment collection with GurutvaPay’s secure solutions.
+                                    Our advanced payment infrastructure safeguards transactions with robust encryption
+                                    and fraud prevention measures, giving businesses and customers peace of mind.
+                                    Whether you're processing Pay-In or Pay-Out transactions, our seamless integration
+                                    with banks and financial institutions ensures smooth, reliable, and efficient
+                                    payment handling. Trust GurutvaPay for secure, compliant, and effortless payment
+                                    collection, allowing you to focus on growing your business with confidence.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Disbursement -->
+                    <div id="ser-tab-payment-disbursement" class="ser-tab-panel">
+                        <div class="row align-items-center">
+                            <div class="col-md-5">
+                                
+<img data-aos="zoom-out" data-aos-delay="500" src="static/img/Payment-Disbursement.png" class="img-fluid rounded" alt="gurutavpay Secure Mobile Transactions and Information">
+
+                            </div>
+                            <div class="col-md-7">
+                                <h2 class="head-tab">Reliable Pay-Out Solutions</h2>
+                                <p>Experience fast and reliable Pay-Out solutions with GurutvaPay. Our seamless payment
+                                    infrastructure ensures quick fund disbursement to vendors, employees, and partners
+                                    with complete security and compliance. Integrated with multiple banking networks and
+                                    financial institutions, GurutvaPay enables hassle-free bulk payments, instant
+                                    settlements, and automated transactions. Whether you need to process refunds,
+                                    payroll, or vendor payments, our trusted Pay-Out solutions offer efficiency,
+                                    transparency, and peace of mind. Simplify your financial operations with
+                                    GurutvaPay’s dependable payout services.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Software Development -->
+                    <div id="ser-tab-software-development" class="ser-tab-panel">
+                        <div class="row align-items-center">
+                            <div class="col-md-5">
+                                <img data-aos="zoom-out" data-aos-delay="500"
+                                     src="{{ url_for('static', filename='img/software-development.png') }}"
+                                     class="img-fluid rounded" alt="Easy Mobile Shopping and Payment">
+
+                            </div>
+                            <div class="col-md-7">
+                                <h2 class="head-tab">Custom Software Development</h2>
+                                <p>GurutvaPay offers custom software development tailored to your business needs. From
+                                    web and mobile apps to enterprise solutions and API integrations, we deliver secure,
+                                    scalable, and high-performance software. Enhance efficiency and drive growth with
+                                    our innovative, user-friendly, and reliable development services.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- API Integration -->
+                    <div id="ser-tab-api-integration" class="ser-tab-panel">
+                        <div class="row align-items-center">
+                            <div class="col-md-5">
+                                <img data-aos="zoom-out" data-aos-delay="500"
+                                     src="{{ url_for('static', filename='img/api-integration.png') }}"
+                                     class="img-fluid rounded" alt="API Integration for Data Exchange">
+
+                            </div>
+                            <div class="col-md-7">
+                                <h2 class="head-tab">Seamless API Integration</h2>
+                                <p>GurutvaPay provides seamless API integration, enabling businesses to connect effortlessly with banking, payment, and third-party services. Our secure and scalable APIs streamline transactions, automate processes, and enhance efficiency. Whether for payments, verification, or data exchange, our robust integration ensures smooth and reliable operations tailored to your business needs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Features Section TAB Section -->
+    <section id="features" class="features section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Easy Integration with GurutvaPay</h2>
+            <p>
+                Power your business with our payment gateway APIs, super-light SDKs,
+                plug and play partnerships. Try our interactive API playground for quick
+                integration.
+            </p>
+        </div>
+
+        <!-- --------- TAB NAV -------- -->
+
+        <div class="container">
+            <div class="d-flex">
+                <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
+                    <li class="nav-item">
+                        <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-3">
+                            <h4>Checkout</h4>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-1">
+                            <h4>Development
+                            </h4>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
+                            <h4>Plugins</h4>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- --------- TAB 2 -------- -->
+
+            <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+                <div class="tab-pane fade feature-tab " id="features-tab-1">
+                    <div class="developer-section">
+                        <div class="developer-content">
+                            <div class="developer-card">
+                                <h4>Developer Guide</h4>
+                                <p>Access our ready-to-use payment API documentation</p>
+                            </div>
+                            <div class="developer-card">
+                                <h4>API Playground</h4>
+                                <p>Check how your product integration is interacting with our payment APIs in
+                                    real-time</p>
+                            </div>
+                        </div>
+                        <div class="developer-image">
+                            <img src="{{ url_for('static', filename='img/dev-laptop.png') }}" alt="gurutvapay"
+                                 class="img-fluid"/>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- --------- TAB 3 -------- -->
+
+                <div class="tab-pane fade" id="features-tab-2">
+                    <div class="plugin-section row align-items-center">
+                        <div class="col-md-6">
+                            <h2 class="plugin-title">Most popular plugins for all e-commerce businesses</h2>
+                            <p class="plugin-text">Use most popular plugins to accept payments on popular self-hosted and
+                                open-source
+                                platforms like Magento, Shopify, Tally, ZohoBooks, ZohoCRM, WooCommerce, WordPress for
+                                creating a plugin
+                                for any e-commerce platform or shopping carts.</p>
+                        </div>
+                        <div class="col-md-6 plugin-logos text-center">
+                            <img src="{{ url_for('static', filename='img/plugins/zoho.png') }}" alt="gurutvapay"
+                                 class="img-fluid"/>
+
+                            <img src="{{ url_for('static', filename='img/plugins/wix.png') }}" alt="gurutvapay"
+                                 class="img-fluid"/>
+
+                            <img src="{{ url_for('static', filename='img/plugins/opencart.png') }}" alt="gurutvapay"
+                                 class="img-fluid"/>
+
+                            <img src="{{ url_for('static', filename='img/plugins/bigcommerce.png') }}" alt="gurutvapay"
+                                 class="img-fluid"/>
+
+                            <img src="{{ url_for('static', filename='img/plugins/vtext.png') }}" alt="gurutvapay"
+                                 class="img-fluid"/>
+
+                            <img src="{{ url_for('static', filename='img/plugins/shopify.png') }}" alt="gurutvapay"
+                                 class="img-fluid"/>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- --------- TAB 1 ACTIVE -------- -->
+                <div class="tab-pane fade active show feature-tab plugin-section" id="features-tab-3">
+                    <h2 class="text-left mb-4 mt-lg-50 mt-20 res-head">
+                        A payment checkout experience crafted for all businesses</h2>
+                    <div
+                            class="row w-100 d-flex flex-column flex-md-row justify-content-around align-items-center mt-lg-100 mt-20">
+
+                        <!-- Web Checkout -->
+                        <div
+                                class="col-md-5 col-12 d-flex flex-column flex-md-row align-items-center text-center position-relative">
+                            <div class="checkout-image position-relative me-md-4 me-0">
+                                <img src="{{ url_for('static', filename='img/tab-a-1.png') }}" alt="gurutvapay"
+                                     class="img-fluid position-absolute top-50 start-50 translate-middle"/>
+                            </div>
+                            <div class="checkout-content mt-5 text-md-start">
+                                <h4>Web Checkout</h4>
+                                <p>Integrate our payment collection API on your website for the best payment experience</p>
+                            </div>
+                        </div>
+
+
+                        <!-- App Checkout -->
+                        <div
+                                class="col-md-5 col-12 d-flex flex-column flex-md-row align-items-center text-center position-relative">
+                            <div class="checkout-image position-relative">
+                                <img src="{{ url_for('static', filename='img/tab-a-2.png') }}" alt="gurutvapay"
+                                     class="img-fluid position-absolute top-50 start-50 translate-middle"/>
+                            </div>
+                            <div class="checkout-content mt-5 text-md-start">
+                                <h4>App Checkout</h4>
+                                <p>Offer the best payment experience for your mobile app-based businesses using our
+                                    feather-light SDKs
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Call To Action Section -->
+    <!--<section id="call-to-action" class="call-to-action section">-->
+    <!--  <div class="container" data-aos="fade-up" data-aos-delay="100">-->
+    <!--    <div class="row content justify-content-center align-items-center position-relative">-->
+    <!--      <div class="col-lg-8 mx-auto text-center">-->
+    <!--        <h2 class="display-4 mb-4">LET'S COLLABORATE!</h2>-->
+    <!--        <p class="mb-4">Your website is the tireless salesperson that works round the clock, even when you rest. We are eager to understand and fulfill your requirements.</p>-->
+    <!--        <a href="https://wa.me/919136914963?text=Hi,%20I%20would%20like%20to%20request%20a%20call%20to%20discuss%20my%20requirements." target="_blank" class="btn btn-cta">Request A Call</a>-->
+    <!--      </div>-->
+
+    <!--      &lt;!&ndash; Abstract Background Elements &ndash;&gt;-->
+    <!--      <div class="shape shape-1">-->
+    <!--        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">-->
+    <!--          <path d="M47.1,-57.1C59.9,-45.6,68.5,-28.9,71.4,-10.9C74.2,7.1,71.3,26.3,61.5,41.1C51.7,55.9,35,66.2,16.9,69.2C-1.3,72.2,-21,67.8,-36.9,57.9C-52.8,48,-64.9,32.6,-69.1,15.1C-73.3,-2.4,-69.5,-22,-59.4,-37.1C-49.3,-52.2,-32.8,-62.9,-15.7,-64.9C1.5,-67,34.3,-68.5,47.1,-57.1Z" transform="translate(100 100)"></path>-->
+    <!--        </svg>-->
+    <!--      </div>-->
+
+    <!--      <div class="shape shape-2">-->
+    <!--        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">-->
+    <!--          <path d="M41.3,-49.1C54.4,-39.3,66.6,-27.2,71.1,-12.1C75.6,3,72.4,20.9,63.3,34.4C54.2,47.9,39.2,56.9,23.2,62.3C7.1,67.7,-10,69.4,-24.8,64.1C-39.7,58.8,-52.3,46.5,-60.1,31.5C-67.9,16.4,-70.9,-1.4,-66.3,-16.6C-61.8,-31.8,-49.7,-44.3,-36.3,-54C-22.9,-63.7,-8.2,-70.6,3.6,-75.1C15.4,-79.6,28.2,-58.9,41.3,-49.1Z" transform="translate(100 100)"></path>-->
+    <!--        </svg>-->
+    <!--      </div>-->
+
+    <!--      &lt;!&ndash; Dot Pattern Groups &ndash;&gt;-->
+    <!--      <div class="dots dots-1">-->
+    <!--        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">-->
+    <!--          <pattern id="dot-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">-->
+    <!--            <circle cx="2" cy="2" r="2" fill="currentColor"></circle>-->
+    <!--          </pattern>-->
+    <!--          <rect width="100" height="100" fill="url(#dot-pattern)"></rect>-->
+    <!--        </svg>-->
+    <!--      </div>-->
+
+    <!--      <div class="dots dots-2">-->
+    <!--        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">-->
+    <!--          <pattern id="dot-pattern-2" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">-->
+    <!--            <circle cx="2" cy="2" r="2" fill="currentColor"></circle>-->
+    <!--          </pattern>-->
+    <!--          <rect width="100" height="100" fill="url(#dot-pattern-2)"></rect>-->
+    <!--        </svg>-->
+    <!--      </div>-->
+
+    <!--      <div class="shape shape-3">-->
+    <!--        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">-->
+    <!--          <path d="M43.3,-57.1C57.4,-46.5,71.1,-32.6,75.3,-16.2C79.5,0.2,74.2,19.1,65.1,35.3C56,51.5,43.1,65,27.4,71.7C11.7,78.4,-6.8,78.3,-23.9,72.4C-41,66.5,-56.7,54.8,-65.4,39.2C-74.1,23.6,-75.8,4,-71.7,-13.2C-67.6,-30.4,-57.7,-45.2,-44.3,-56.1C-30.9,-67,-15.5,-74,0.7,-74.9C16.8,-75.8,33.7,-70.7,43.3,-57.1Z" transform="translate(100 100)"></path>-->
+    <!--        </svg>-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--  </div>-->
+    <!--</section>-->
+
+
+</main>
+
+
+<!-- JavaScript for Tab Functionality -->
+
+
+<!-- JavaScript for Tab Functionality -->
+<script>
+  function serTabShow(event, tabId) {
+    const tabs = document.querySelectorAll('.ser-tab-panel');
+    const buttons = document.querySelectorAll('.ser-tab-item');
+
+    // Hide all tabs and remove 'active' from all buttons
+    tabs.forEach(tab => tab.style.display = 'none');
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    // Show selected tab panel and highlight the button
+    const targetTab = document.getElementById(tabId);
+    if (targetTab) {
+      targetTab.style.display = 'block';
+    }
+
+    if (event) {
+      event.currentTarget.classList.add('active');
+      // Update the hash in the URL (without scrolling)
+      history.replaceState(null, '', `#${event.currentTarget.id}`);
+    }
+  }
+
+  // On page load
+  document.addEventListener("DOMContentLoaded", function () {
+    const defaultTabId = 'ser-tab-payment-collection';
+    const tabHash = window.location.hash.replace('#', '');
+
+    const allTabs = document.querySelectorAll('.ser-tab-panel');
+    const allButtons = document.querySelectorAll('.ser-tab-item');
+
+    // Hide all tab panels
+    allTabs.forEach(tab => tab.style.display = 'none');
+    allButtons.forEach(btn => btn.classList.remove('active'));
+
+    // Find corresponding tabId from hash (e.g., #p-d maps to 'ser-tab-payment-disbursement')
+    let selectedButton = null;
+    if (tabHash) {
+      selectedButton = document.getElementById(tabHash);
+    }
+
+    if (selectedButton) {
+      selectedButton.classList.add('active');
+      const tabPanelId = selectedButton.getAttribute('onclick').match(/'([^']+)'/)[1];
+      document.getElementById(tabPanelId).style.display = 'block';
+    } else {
+      // Fallback to default tab
+      document.getElementById(defaultTabId).style.display = 'block';
+      document.getElementById('p-c').classList.add('active');
+    }
+  });
+</script>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+
+{% endblock javascripts %}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
+
+  <channel>
+    <title>GurutvaPay Blog</title>
+    <atom:link href="https://www.gurutvapay.com/feed/" rel="self" type="application/rss+xml" />
+    <link>https://www.gurutvapay.com</link>
+    <description>Latest updates and articles from GurutvaPay</description>
+    <lastBuildDate>Sun, 31 Aug 2025 10:00:00 +0000</lastBuildDate>
+    <language>en-US</language>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+
+    <item>
+      <title><![CDATA[Benefits of UPI for Small Businesses]]></title>
+      <link>https://www.gurutvapay.com/blog/Benefits_of_upi_small_business_benefits</link>
+      <comments>https://www.gurutvapay.com/blog/Benefits_of_upi_small_business_benefits#comments</comments>
+      <pubDate>Tue, 15 Jul 2025 10:00:00 +0000</pubDate>
+      <dc:creator><![CDATA[GurutvaPay]]></dc:creator>
+      <category><![CDATA[UPI]]></category>
+
+      <guid isPermaLink="false">https://www.gurutvapay.com/blog/Benefits_of_upi_small_business_benefits</guid>
+
+      <description><![CDATA[
+        UPI has revolutionized small business payments in India. Learn how it empowers vendors with instant, secure, and cost-effective transactions.
+      ]]></description>
+
+      <content:encoded><![CDATA[
+        <p><img src="https://www.gurutvapay.com/static/img/blog/blog-1.jpg" alt="UPI for Small Businesses" style="width:100%;max-width:600px;" /></p>
+        <p><strong>The Unified Payments Interface (UPI)</strong> has revolutionized the way small businesses handle transactions in India. By offering instant, cashless payments, UPI has become a vital tool in the digital economy.</p>
+        <h2>Instant and Secure Payments</h2>
+        <p>UPI allows real-time transactions that are both fast and secure. Small businesses no longer need to wait for settlement times or worry about bounced cheques.</p>
+        <h2>Zero Setup Cost</h2>
+        <p>UPI only needs a smartphone and a bank account, making it cost-effective for small merchants.</p>
+        <h2>Reduced Transaction Fees</h2>
+        <p>Unlike credit card payments, UPI charges are negligible or zero, helping merchants keep more profits.</p>
+        <h2>Improved Customer Experience</h2>
+        <p>UPI lets customers pay using popular apps like Google Pay, PhonePe, Paytm, etc., making transactions fast and easy.</p>
+        <p><a href="https://www.gurutvapay.com/blog/Benefits_of_upi_small_business_benefits">Read full article</a></p>
+      ]]></content:encoded>
+
+    </item>
+
+  </channel>
+</rss>

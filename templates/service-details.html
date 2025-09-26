@@ -1,0 +1,63 @@
+{% extends "layouts/jaikalki_layout.html" %}
+
+
+{% block meta %}
+    <meta name="description" content="Discover GurutvaPay's secure and reliable online payment solutions. We offer UPI payments, merchant services, and fast settlements for businesses.">
+    <meta name="keywords" content="UPI payment service provider, online card processing India, instant refunds payment gateway, subscription billing solution India, recurring payments provider India, mobile payment integration India, secure API payments India, multiple payment options India, e-commerce payment services India, PSP with fast settlement, payout solutions India, best features payment gateway India, developer-friendly PSP India, API first payment gateway India, quick integration payment API India, payment gateway with plugins India, trusted merchant services India, fraud protection payment India, online payment API India, international payouts gateway India">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Our Services - GurutvaPay Payment Solutions">
+    <meta property="og:description" content="Explore our secure and fast online payment solutions, including UPI payments, merchant services, and seamless transactions.">
+    <meta property="og:image" content="{{ url_for('static', filename='img/Gravity_logo.png', _external=True) }}">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:title" content="Our Services - GurutvaPay Payment Solutions">
+    <meta name="twitter:description" content="Explore our secure and fast online payment solutions, including UPI payments, merchant services, and seamless transactions.">
+
+    <!-- Canonical URL (Specific to Services Page) -->
+    <link rel="canonical" href="https://www.gurutvapay.com/services">
+
+    {% endblock %}
+
+{% block title %}Our Services - GurutvaPay{% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+
+
+<!-- JavaScript for Tab Functionality -->
+
+
+<!-- JavaScript for Tab Functionality -->
+<script>
+    function serTabShow(event, tabId) {
+        var tabs = document.querySelectorAll('.ser-tab-panel');
+        var buttons = document.querySelectorAll('.ser-tab-item');
+
+        // Hide all tabs and remove active class from buttons
+        tabs.forEach(tab => tab.style.display = 'none');
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        // Show the selected tab and highlight the button
+        document.getElementById(tabId).style.display = 'block';
+        event.currentTarget.classList.add('active');
+    }
+
+    // Show only the first tab by default on page load
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('.ser-tab-panel').forEach(tab => tab.style.display = 'none');
+        document.getElementById('ser-tab-payment-collection').style.display = 'block';
+    });
+</script>
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+
+{% endblock javascripts %}

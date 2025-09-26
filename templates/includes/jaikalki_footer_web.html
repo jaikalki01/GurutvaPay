@@ -1,0 +1,147 @@
+<style>
+    /* Floating WhatsApp Button */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            background-color: #25d366;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .whatsapp-button img {
+            width: 35px;
+            height: 35px;
+        }
+
+    .call-button {
+        position: fixed;
+        bottom: 90px; /* Position the call button above the WhatsApp button */
+        background-color: #34b7f1; /* Blue color for call button */
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .call-button img {
+        width: 35px;
+        height: 35px;
+    }
+    .buttons{
+        margin-left: 10px;
+
+    }
+
+</style>
+<footer id="footer" class="footer">
+
+    <div class="container footer-top">
+        <div class="row gy-4 justify-content-around">
+            <div class="col-lg-4 col-md-6 footer-about d-flex align-items-left flex-column ">
+                <a href="index.html" class="logo d-flex align-items-center">
+                    <img src="{{ url_for('static', filename='img/grutuvapay_logo.png') }}"
+                         alt="gurutvapay"
+                         class="img-fluid">
+                </a>
+
+
+
+                <p class="max-w-300">GurutvaPay, connects merchants with banks and PAPG companies for secure MIDs. We offer seamless Pay-In/Pay-Out solutions and advanced web, mobile, and API development Services.</p>
+
+                 <div class="social-links d-flex mt-4">
+                    <a href="https://x.com/JaikalkiT53697" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61572305747999" target="_blank"><i
+                            class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/jaikalki_technology_pvt_ltd/?hl=en" target="_blank"><i
+                            class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/jaikalki-technology/" target="_blank"><i
+                            class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-3 footer-links">
+
+
+                <h4>Quick Link</h4>
+
+                <ul class="pt-3 f-pages-links">
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About us</a></li>
+                    <li><a href="{{ url_for('services') }}">Services</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-3 footer-links">
+                <h4>Important Links</h4>
+                <ul class="pt-3">
+                    <li><a href="{{ url_for('terms') }}">Terms & Conditions</a></li>
+                    <li><a href="{{ url_for('privacy') }}">Privacy Policy</a></li>
+                    <li><a href="{{ url_for('refund') }}">Refund Policy</a></li>
+
+                </ul>
+            </div>
+
+
+            <div class="col-lg-2 col-md-3 footer-links">
+                <h4>Our Address</h4>
+                <div class="footer-contact pt-3">
+                    <p>Sh N B1/A Grd Flr Mahavir, Ngr,
+                    Deepak Hospital, Mira Road, Thane,
+                    Maharashtra - 401107</p>
+
+                </div>
+
+            </div>
+<!--
+            <div class="col-lg-2 col-md-3 footer-links">
+                <h4>Social Links</h4>
+                <div class="social-links d-flex mt-4">
+                    <a href="https://x.com/JaikalkiT53697" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61572305747999" target="_blank"><i
+                            class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/jaikalki_technology_pvt_ltd/?hl=en" target="_blank"><i
+                            class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/jaikalki-technology/" target="_blank"><i
+                            class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+-->
+
+        </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+        <div class="credits">
+         Copyright © <span id="year"></span><script>document.getElementById("year").textContent = new Date().getFullYear();</script> Gurutvapay All rights reserved
+ Designed by <span style="color:#0D83FD;"><a href="https://jaikalki.com/" target="_blank">Jaikalki Technology</a></span>
+      </div>
+    </div>
+
+    <!--
+    <div class="buttons">
+        <a href="tel:+91 22 350 399 27" target="_blank" class="call-button" title="Call us">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="Phone Icon">
+        </a>
+
+        <a href="https://wa.me/919136914963?text=Hi,%20I%20would%20like%20to%20request%20a%20call%20to%20discuss%20my%20requirements."
+           target="_blank" class="whatsapp-button" title="Chat with us">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+        </a>
+    </div>
+-->
+
+</footer>

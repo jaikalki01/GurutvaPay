@@ -1,0 +1,843 @@
+{% extends "layouts/jaikalki_layout.html" %} 
+
+{% block meta %}
+    <meta name="description" content="GurutvaPay is the best online payment gateway providing instant settlements, low transaction fees, and seamless UPI integration.">
+    <meta name="keywords" content="online payment gateway India, best payment gateway India, UPI payment gateway, international payment gateway India, accept payments online, secure online payments, low cost payment gateway, best PSP in India, cross-border payment solution, digital payment provider India, fast merchant settlement, global payment solutions India, top fintech India, cheapest payment gateway India, instant refund gateway, subscription payment gateway India, API payment gateway, mobile payment solutions India, merchant payment service provider, secure checkout India">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="GurutvaPay - Best Payment Gateway for Businesses">
+    <meta property="og:description" content="Grow your business with GurutvaPay's fast and secure online payment solutions.">
+    <meta property="og:image" content="{{ url_for('static', filename='img/Gravity_logo.png', _external=True) }}">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:title" content="GurutvaPay - Best Payment Gateway for Businesses">
+    <meta name="twitter:description" content="Grow your business with GurutvaPay's fast and secure online payment solutions.">
+
+     <!-- Canonical URL (Specific to Index Page) -->
+     <link rel="canonical" href="https://www.gurutvapay.com/">
+{% endblock %}
+
+{% block title %}GurutvaPay - Best Online Payment Solution{% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+<style>
+    @keyframes slide {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-50%);
+        }
+
+        /* Move by half so it looks continuous */
+    }
+</style>
+
+{% endblock stylesheets %} 
+
+
+{% block content %}
+
+<main class="main">
+    <!---------- Home banner ---------->
+    <section class="banner banner-hm" alt="Selecting Your Preferred Payment Method">
+        <div class="container">
+            <div class="banner-content">
+                <div class="text">
+                    <h3 data-aos="zoom-out" data-aos-delay="300">Best & Easiest</h3>
+                    <h1 data-aos="zoom-out" data-aos-delay="400">
+                        Welcome to GurutvaPay
+                    </h1>
+                    <p data-aos="zoom-out" data-aos-delay="500">
+                        Welcome to GurutvaPay – the best and easiest way to manage payments seamlessly. Our secure and user-friendly platform simplifies transactions, offering fast Pay-In and Pay-Out solutions, UPI payments, and seamless API integrations. Whether you're a business or an entrepreneur, GurutvaPay ensures effortless financial operations with reliability and efficiency. Experience hassle-free payments with us today!
+                    </p>
+                    <a href="/contact" class="btn" data-aos="fade-up" data-aos-delay="600">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---------- Home banner end ---------->
+
+    <!-- Hero Section -->
+
+    <section id="hero" class="hero section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+                        <div class="company-badge mb-4">
+                            <i class="bi bi-gear-fill me-2"></i>
+                           Advancing Digital Payments with Ease
+                        </div>
+
+                        <h1 class="mb-4">
+                            <span class="accent-text">Empowering Businesses </span><br />
+                            with Seamless Solutions
+                        </h1>
+
+                        <p class="mb-4 mb-md-5">
+                            As a Technology Service Provider (TSP) under the Gravity
+                            DigiPayment division of Jaikalki Technology Pvt Ltd, we bridge the
+                            gap between merchants and financial institutions by connecting
+                            with multiple banks and PAPG companies to secure MID (Merchant
+                            IDs).
+                            <br />
+                            <br />
+                            Our Pay-In Solution ensures seamless payment collection services,
+                            providing businesses with secure and efficient payment acceptance
+                            across multiple platforms.
+
+                        </p>
+
+                        <!--                        <ul class="list-unstyled mb-4">-->
+                        <!--                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Responsive Web Design in 24-->
+                        <!--                                Hours-->
+                        <!--                            </li>-->
+                        <!--                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Seamless Pay-IN and Pay-OUT-->
+                        <!--                                Solutions-->
+                        <!--                            </li>-->
+                        <!--                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Advanced SEO and Rank Boost-->
+                        <!--                                Services-->
+                        <!--                            </li>-->
+                        <!--                            <li><i class="bi bi-check-circle-fill text-primary me-2"></i> Robust API Integration and-->
+                        <!--                                Development-->
+                        <!--                            </li>-->
+                        <!--                        </ul>-->
+
+                        <div class="hero-buttons">
+
+                            <!--                            <a href="#services" class="btn btn-link mt-2 mt-sm-0">
+                                                                        <i class="bi bi-grid-3x3-gap-fill me-1"></i>
+                                                                         Explore Services
+                                                                     </a>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="{{ url_for('static', filename='img/swiper-img/img-1.png') }}"
+                                        alt="gurutvapay DiPay is a sleek and modern abbreviation for DigiPayment, combining digital convenience with quick, catchy branding." class="img-fluid" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{{ url_for('static', filename='img/swiper-img/img-5.png') }}"
+                                        alt="gurutvapay DiPay is a sleek and modern abbreviation for DigiPayment, combining digital convenience with quick, catchy branding." class="img-fluid" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{{ url_for('static', filename='img/swiper-img/img-2.png') }}"
+                                        alt="gurutvapay DiPay is a sleek and modern abbreviation for DigiPayment, combining digital convenience with quick, catchy branding." class="img-fluid" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{{ url_for('static', filename='img/swiper-img/img-3.png') }}"
+                                        alt="gurutvapay DiPay is a sleek and modern abbreviation for DigiPayment, combining digital convenience with quick, catchy branding." class="img-fluid" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="{{ url_for('static', filename='img/swiper-img/img-4.png') }}"
+                                        alt="gurutvapay DiPay is a sleek and modern abbreviation for DigiPayment, combining digital convenience with quick, catchy branding." class="img-fluid" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-------   hero2 badal ------>
+    <section id="hero2" class="hero section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row align-items-center flex-box">
+
+                <div class="col-lg-6">
+                    <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
+                        <img src="{{ url_for('static', filename='img/payment.gif') }}" alt="gurutvapay Seamless Shopping with QR Code Payments"
+                            class="img-fluid" />
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+                        <h1 class="mb-4">
+                            Seamlessly Accept<span class="accent-text"> Payments </span> and
+                            Delight <br />
+                            Your <span class="accent-text">Customers.</span>
+                        </h1>
+
+                        <p class="mb-4 mb-md-5">
+                            Effortlessly streamline your payment process and enhance customer satisfaction with our
+                            seamless and secure payment solutions. GurutvaPay empowers businesses to accept payments
+                            across multiple platforms with ease, ensuring reliability, speed, and efficiency. Whether
+                            you are a small startup or a large enterprise, our advanced Pay-In and Pay-Out services
+                            simplify transactions, reduce operational hassles, and improve cash flow.
+                            <br> <br>
+                            With seamless integrations, robust security measures, and a user-friendly interface, we
+                            provide businesses with the tools they need to deliver a smooth and hassle-free payment
+                            experience. By eliminating complexities and ensuring swift transaction processing,
+                            GurutvaPay allows you to focus on growing your business while keeping your customers
+                            satisfied. Choose GurutvaPay to enhance your payment experience and build lasting customer
+                            trust.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row stats-row gy-4 mt-5 justify-content-around" data-aos="fade-up" data-aos-delay="500">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="bi bi-trophy"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4>2+ Years of Expertise</h4>
+                            <p class="mb-0">Shaping digital transformation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="bi bi-briefcase"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4>369+ Successful Projects</h4>
+                            <p class="mb-0">Bringing ideas to life</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4>Skilled Experts</h4>
+                            <p class="mb-0">Committed to your growth</p>
+                        </div>
+                    </div>
+                </div>
+                <!--                <div class="col-lg-3 col-md-6">-->
+                <!--                    <div class="stat-item">-->
+                <!--                        <div class="stat-icon">-->
+                <!--                            <i class="bi bi-award"></i>-->
+                <!--                        </div>-->
+                <!--                        <div class="stat-content">-->
+                <!--                            <h4>5+ Industry Awards</h4>-->
+                <!--                            <p class="mb-0">Recognized for excellence</p>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+            </div>
+        </div>
+    </section>
+
+    <!-------   hero2 badal  end------>
+
+    <!-- About Section -->
+    <!-- <section id="about" class="about section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 align-items-center justify-content-between">
+          <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
+            <span class="about-meta">ABOUT JAIKALKI TECHNOLOGY PVT LTD</span>
+            <h2 class="about-title">A Journey of Innovation and Growth</h2>
+            <p class="about-description">
+              Every great journey begins with a small step. For Jaikalki
+              Technology, that step was taken two years ago as a proprietorship
+              specializing in web development. In March 2023, driven by passion
+              and dedication, we transitioned into Jaikalki Technology Pvt Ltd, a
+              powerhouse offering a diverse range of IT services.
+            </p>
+            <p class="about-description">
+              From our humble beginnings as freelancers to a thriving Private
+              Limited entity, we have consistently delivered innovative solutions
+              to meet the unique demands of our clients. Today, Jaikalki
+              Technology Pvt Ltd is proud to offer three specialized divisions:
+            </p>
+
+            <ul class="feature-list">
+              <li>
+                <i class="bi bi-check-circle-fill"></i> <strong>WebTech</strong> –
+                Redefining digital presence with cutting-edge web solutions.
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <strong>Rank Boost</strong> – Elevating brands with top-notch SEO
+                strategies and digital marketing.
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <strong>Gravity DigiPayment</strong> – Simplifying financial
+                transactions for businesses with seamless payment solutions.
+              </li>
+            </ul>
+
+            <p class="about-description">
+              At Jaikalki Technology Pvt Ltd, we treat our clients like family,
+              prioritizing long-term relationships and delivering superior
+              solutions that drive growth.
+            </p>
+          </div>
+
+          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="image-wrapper">
+              <div
+                class="images position-relative"
+                data-aos="zoom-out"
+                data-aos-delay="400">
+                <img
+                  src="{{ config.JAIKALKI_ROOT}}/assets/img/about_jaikalki.jpg"
+                  alt="Business Meeting"
+                  class="img-fluid main-image rounded-4" />
+                <img
+                  src="{{ config.JAIKALKI_ROOT}}/assets/img/about2_jaikalki.jpg"
+                  alt="Team Discussion"
+                  class="img-fluid small-image rounded-4" />
+              </div>
+              <div class="experience-badge floating">
+                <h3>2+ <span>Years</span></h3>
+                <p>Of innovation and excellence</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- /About Section -->
+
+    <!-- Features Section TAB Section -->
+    <section id="features" class="features section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Easy Integration with GurutvaPay</h2>
+            <p>
+                Power your business with our payment gateway APIs, super-light SDKs,
+                plug and play partnerships. Try our interactive API playground for quick
+                integration.
+            </p>
+        </div>
+
+        <!-- --------- TAB NAV -------- -->
+
+        <div class="container">
+            <div class="d-flex">
+                <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
+                    <li class="nav-item">
+                        <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-3">
+                            <h4>Checkout
+                            </h4>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-1">
+                            <h4>Development
+                            </h4>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
+                            <h4>Plugins</h4>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- --------- TAB 2 -------- -->
+
+            <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+                <div class="tab-pane fade feature-tab " id="features-tab-1">
+                    <div class="developer-section">
+                        <div class="developer-content">
+                            <div class="developer-card">
+                                <h4>Developer Guide</h4>
+                                <p>Access our ready-to-use payment gateway API documentation and production-ready
+                                    designs</p>
+
+                            </div>
+                            <div class="developer-card">
+                                <h4>API Playground</h4>
+                                <p>Check how your product integration is interacting with our payment APIs in
+                                    real-time</p>
+
+                            </div>
+                        </div>
+                        <div class="developer-image">
+                            <img src="{{ url_for('static', filename='img/dev-laptop.png') }}" alt="gurutvapay Software Development and Debugging"
+                                class="img-fluid" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- --------- TAB 3 -------- -->
+
+                <div class="tab-pane fade" id="features-tab-2">
+                    <div class="plugin-section row align-items-center">
+                        <div class="col-md-6">
+                            <h2 class="plugin-title">Most popular plugins for all e-commerce businesses</h2>
+                            <p class="plugin-text">Use GurutvaPay plugins to accept payments on popular self-hosted and
+                                open-source
+                                platforms like Magento, Shopify, Tally, ZohoBooks, ZohoCRM, WooCommerce, WordPress for
+                                creating a plugin
+                                for any e-commerce platform or shopping carts.</p>
+
+                        </div>
+                        <div class="col-md-6 plugin-logos text-center">
+                            <img src="{{ url_for('static', filename='img/plugins/zoho.png') }}" alt="gurutvapay Top E-commerce and Website Building Platforms"
+                                class="img-fluid" />
+
+                            <img src="{{ url_for('static', filename='img/plugins/wix.png') }}" alt="gurutvapay Top E-commerce and Website Building Platforms"
+                                class="img-fluid" />
+
+                            <img src="{{ url_for('static', filename='img/plugins/opencart.png') }}" alt="gurutvapay Top E-commerce and Website Building Platforms"
+                                class="img-fluid" />
+
+                            <img src="{{ url_for('static', filename='img/plugins/bigcommerce.png') }}" alt="gurutvapay Top E-commerce and Website Building Platforms"
+                                class="img-fluid" />
+
+                            <img src="{{ url_for('static', filename='img/plugins/vtext.png') }}" alt="gurutvapay Top E-commerce and Website Building Platforms"
+                                class="img-fluid" />
+
+                            <img src="{{ url_for('static', filename='img/plugins/shopify.png') }}" alt="gurutvapay Top E-commerce and Website Building Platforms"
+                                class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- --------- TAB 1 ACTIVE -------- -->
+                <div class="tab-pane fade active show feature-tab plugin-section" id="features-tab-3">
+                    <h2 class="text-left mb-4 mt-lg-50 mt-20">
+                        A payment checkout experience crafted for all businesses
+                    </h2>
+                    <div
+                        class="row w-100 d-flex flex-column flex-md-row justify-content-around align-items-center mt-lg-100 mt-20">
+
+                        <!-- Web Checkout -->
+                        <div
+                            class="col-md-5 col-12 d-flex flex-column flex-md-row align-items-center text-center position-relative gap-4">
+                            <div class="checkout-image position-relative me-md-4 me-0">
+                                <img src="{{ url_for('static', filename='img/tab-a-1.png') }}" alt="gurutvapay Flexible Online Payment Options"
+                                    class="img-fluid position-absolute top-50 start-50 translate-middle" />
+                            </div>
+                            <div class="checkout-content mt-5 text-md-start">
+                                <h4>Web Checkout</h4>
+                                <p>Integrate our payment gateway on your website for the best payment experience</p>
+
+                            </div>
+                        </div>
+
+
+                        <!-- App Checkout -->
+                        <div
+                            class="col-md-5 col-12 d-flex flex-column flex-md-row align-items-center text-center position-relative">
+                            <div class="checkout-image position-relative">
+                                <img src="{{ url_for('static', filename='img/tab-a-2.png') }}" alt="gurutvapay Smart and Secure Mobile Payments"
+                                    class="img-fluid position-absolute top-50 start-50 translate-middle" />
+                            </div>
+                            <div class="checkout-content mt-5 text-md-start">
+                                <h4>App Checkout</h4>
+                                <p>Offer the best payment experience for your mobile app-based businesses using our
+                                    feather-light SDKs
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End tab content item -->
+
+
+
+    <!-- /Features 2 Section -->
+
+    <!-- Features Cards Section -->
+    <section id="features-cards" class="features-cards section">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="section-title" data-aos="fade-up">
+                <h2>Do more with digital payments</h2>
+                <p>
+                    Get a power-packed suite of payment solutions that will help you run your business conveniently
+                </p>
+            </div>
+
+
+            <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slider-box">
+
+
+
+                        <img src="{{ url_for('static', filename='img/swipr2-img/payment-gateway-instant-refund-processing.png') }}"
+                            alt="gurutvapay Instant Digital Refund Process" class="img-fluid" />
+
+
+                        <h4>Instant Refunds</h4>
+                        <p>Delight your customers by disbursing refunds in 5 minutes of refund request</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ url_for('static', filename='img/swipr2-img/best-one-click-payment-gateway.png') }}"
+                            alt="gurutvapay Paying for Coffee Online" class="img-fluid" />
+                        <h4>Native OTP </h4>
+                        <p>Offer a one-click payment experience to your customers for card payments</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ url_for('static', filename='img/swipr2-img/payment-gateway-recurring-subscription.png') }}"
+                            alt="gurutvapay Easy Music Subscription Management" class="img-fluid" />
+                        <h4>Recurring Payments</h4>
+                        <p>Automate payment collection and customize subscription plans for customers</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ url_for('static', filename='img/swipr2-img/tekenization-payment-gateway-integration.png') }}"
+                            alt="gurutvapay Choose Your Payment Method" class="img-fluid" />
+                        <h4>Instant Refunds</h4>
+                        <p>Delight your customers by disbursing refunds in 5 minutes of refund request</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ url_for('static', filename='img/swipr2-img/best-one-click-payment-gateway.png') }}"
+                            alt="gurutvapay" class="img-fluid" />
+                        <h4>Native OTP </h4>
+                        <p>Offer a one-click payment experience to your customers for card payments</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ url_for('static', filename='img/swipr2-img/payment-gateway-recurring-subscription.png') }}"
+                            alt="gurutvapay" class="img-fluid" />
+                        <h4>Recurring Payments</h4>
+                        <p>Automate payment collection and customize subscription plans for customers</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+    <!-- /Features Cards Section -->
+
+
+    <section class="section py-5  ">
+        <div class="container">
+            <div class="row align-items-center  upi-main-div">
+
+                <!-- Text Section -->
+                <div class="col-md-6">
+                    <h2 class="fw-bold">Unlock easy UPI payments with GurutvaPay</h2>
+                    <p class="text-muted">
+                        Unlock the power of effortless UPI transactions with GurutvaPay, your trusted payment partner.
+                        Our seamless and secure UPI payment solutions enable businesses to accept payments instantly,
+                        ensuring a smooth and hassle-free experience for both merchants and customers. With GurutvaPay,
+                        you can enjoy fast transactions, enhanced security, and easy integration across multiple
+                        platforms. Whether you're a small business or a large enterprise, our advanced payment
+                        infrastructure helps you streamline collections and boost customer satisfaction. Simplify
+                        payments and grow your business with the reliability of GurutvaPay.
+                    </p>
+                </div>
+                <!-- Image Section -->
+                <div class="col-md-6 img-div">
+                    <img src="{{ url_for('static', filename='img/partnership.png') }}" alt="gurutvapay Digital Business Collaboration"
+                        class="img-fluid" />
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Faq Section -->
+    <section class="faq-9 faq section " id="faq">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>FAQ's</h2>
+            </div>
+
+            <div class="col-lg-7 faq-main-div bg-light" data-aos="fade-up" data-aos-delay="300">
+                <div class="faq-container">
+                    <div class="faq-item faq-active">
+                        <h3>What is a payment gateway?</h3>
+                        <div class="faq-content">
+                            <p>
+                                A payment gateway is a technology solution businesses can use to accept payments
+                                digitally. It can be
+                                integrated into web or mobile platforms to enable transactions via one or more payment
+                                modes, like UPI,
+                                credit or debit cards, and net banking. When a customer makes a payment, the payment
+                                gateway securely
+                                deals with the customer’s sensitive data, such as card or UPI details. It then verifies
+                                the payment
+                                details and checks if the customer has sufficient funds in the source account to make
+                                the purchase. Once
+                                that is done, it starts the process of facilitating the funds to move from the
+                                customer’s account to the
+                                merchant’s. The customer gets a confirmation of whether the payment has been accepted or
+                                declined.
+                                Payment gateway providers are crucial in facilitating online transactions between
+                                merchants, customers,
+                                and banks.
+                            </p>
+                        </div>
+                        <i class="faq-toggle bi bi-chevron-right"></i>
+                    </div>
+                    <!-- End Faq item-->
+
+                    <div class="faq-item">
+                        <h3>
+                            Why choose GurutvaPay Payment Gateway?
+                        </h3>
+                        <div class="faq-content">
+                            <p>
+                                GurutvaPay Payment Gateway offers a seamless, secure, and efficient way to accept online
+                                payments. With
+                                support for multiple payment methods, including UPI, credit/debit cards, net banking,
+                                and wallets, it
+                                ensures a smooth checkout experience for your customers. GurutvaPay’s advanced fraud
+                                prevention system,
+                                quick settlement process, and easy integration with websites and mobile apps make it a
+                                trusted choice
+                                for businesses of all sizes. Whether you're a startup or an enterprise, GurutvaPay
+                                provides reliable
+                                solutions to streamline your transactions and boost your business growth.
+                            </p>
+                        </div>
+                        <i class="faq-toggle bi bi-chevron-right"></i>
+                    </div>
+                    <!-- End Faq item-->
+
+                    <div class="faq-item">
+                        <h3>Does GurutvaPay payment gateway support international payments?</h3>
+                        <div class="faq-content">
+                            <p>
+                                Yes, GurutvaPay supports international payments, allowing businesses to accept
+                                transactions from
+                                customers worldwide. With multi-currency support and secure payment processing,
+                                GurutvaPay ensures
+                                seamless cross-border transactions. It offers various international payment methods,
+                                including
+                                credit/debit cards, net banking, and digital wallets, making global payments
+                                hassle-free. Whether you're
+                                expanding your business internationally or catering to overseas customers, GurutvaPay
+                                provides a
+                                reliable and efficient payment solution.
+                            </p>
+                        </div>
+                        <i class="faq-toggle bi bi-chevron-right"></i>
+                    </div>
+                    <!-- End Faq item-->
+
+                    <div class="faq-item">
+                        <h3>In what ways can you accept digital payments through the GurutvaPay payment gateway?</h3>
+                        <div class="faq-content">
+                            <p><strong>UPI Payments:</strong> Receive instant payments via popular UPI apps like Google
+                                Pay, PhonePe,
+                                Paytm, and more.<br>
+                                <strong>Credit & Debit Cards:</strong> Accept payments from all major card networks,
+                                including Visa,
+                                Mastercard, RuPay, and American Express.<br>
+                                <strong>Net Banking:</strong> Enable customers to pay directly from their bank accounts
+                                through secure
+                                net banking transactions.<br>
+                                <strong>Digital Wallets:</strong> Accept payments via leading digital wallets for faster
+                                and hassle-free
+                                transactions.<br>
+                                <strong>EMI & Buy Now, Pay Later (BNPL):</strong> Offer customers flexible payment
+                                options with EMI and
+                                BNPL services.<br>
+                                <strong>QR Code Payments:</strong> Simplify transactions with quick and secure QR-based
+                                payments.<br>
+                                <strong>International Payments:</strong> Accept cross-border payments with
+                                multi-currency support and
+                                global card processing.
+                            </p>
+
+                        </div>
+                        <i class="faq-toggle bi bi-chevron-right"></i>
+                    </div>
+                    <!-- End Faq item-->
+
+                    <div class="faq-item">
+                        <h3>What is the settlement cycle of the GurutvaPay payment gateway?</h3>
+                        <div class="faq-content">
+                            <p>
+                                The settlement cycle of the GurutvaPay payment gateway is designed for fast and
+                                efficient transactions.
+                                Typically, settlements are processed within T+1 working day (where T is the transaction
+                                date). This
+                                ensures that merchants receive their funds quickly, enhancing cash flow for their
+                                business.
+                                Additionally, GurutvaPay offers instant and same-day settlement options for eligible
+                                businesses. The
+                                funds are directly transferred to the merchant's registered bank account after deducting
+                                applicable
+                                charges. For customized settlement schedules, merchants can contact the GurutvaPay
+                                support team.
+                            </p>
+                        </div>
+                        <i class="faq-toggle bi bi-chevron-right"></i>
+                    </div>
+                    <!-- End Faq item-->
+
+                    <div class="faq-item">
+                        <h3>Does GurutvaPay PG support vernacular or multi-lingual checkout?</h3>
+                        <div class="faq-content">
+                            <p>
+                                Yes, GurutvaPay supports a vernacular and multi-lingual checkout experience. To enhance
+                                user convenience and accessibility, GurutvaPay allows customers to complete transactions
+                                in multiple regional languages. This ensures a seamless payment experience for users
+                                across different demographics, improving conversion rates and customer satisfaction.
+                                Merchants can enable multi-lingual support based on their business needs. For more
+                                details, reach out to the GurutvaPay support team.
+                            </p>
+                        </div>
+                        <i class="faq-toggle bi bi-chevron-right"></i>
+                    </div>
+                    <!-- End Faq item-->
+
+
+                    <div class="faq-item">
+                        <h3>What platforms does the GurutvaPay payment gateway support?</h3>
+                        <div class="faq-content">
+                            <p>
+                                <strong>Websites & E-commerce Stores:</strong> Easily integrate with platforms like
+                                Shopify, WooCommerce, Magento, OpenCart, and more.<br>
+                                <strong>Mobile Applications:</strong> Enable secure payments on Android and iOS apps via
+                                SDKs.<br>
+                                <strong>Custom Websites & Applications:</strong> Integrate via REST APIs for a fully
+                                customized payment experience.<br>
+                                <strong>Billing & Subscription Platforms:</strong> Supports automated recurring payments
+                                and invoicing systems.<br>
+                                <strong>POS & Offline Payments:</strong> Accept payments through QR codes, links, and
+                                offline payment solutions.<br><br>
+                                For more details on integration, merchants can contact the GurutvaPay support team.
+                            </p>
+                        </div>
+                        <i class="faq-toggle bi bi-chevron-right"></i>
+                    </div>
+                    <!-- End Faq item-->
+
+
+                    <div class="faq-item">
+                        <h3>How to integrate the GurutvaPay payment gateway on a website or mobile app?</h3>
+                        <div class="faq-content">
+                            <p>
+
+                                GurutvaPay is a leading payment gateway in India that can be easily integrated into a
+                                website or mobile app using the following methods:
+
+                                <br><br>
+                                <strong>GurutvaPay APIs:</strong> Ideal for desktop websites and custom web
+                                applications.<br>
+                                <strong>GurutvaPay SDKs:</strong> Best suited for seamless integration into mobile
+                                apps.<br>
+                                <strong>GurutvaPay Plugins:</strong> Compatible with third-party platforms like
+                                WooCommerce, Shopify, BigCommerce, and Shopmatic.<br>
+                                <br>
+
+                                For a successful GurutvaPay payment system integration, follow the step-by-step
+                                instructions in the developer guide.
+
+                            </p>
+                        </div>
+                        <i class="faq-toggle bi bi-chevron-right"></i>
+                    </div>
+                    <!-- End Faq item-->
+
+
+                    <div class="faq-item">
+                        <h3>How to set up GurutvaPay payment gateway for your business?</h3>
+                        <div class="faq-content">
+                            <p>
+                                Setting up GurutvaPay for your business is quick and hassle-free with 100% online
+                                onboarding. Just follow these simple steps:
+
+                                <br>
+                                1. Sign up on GurutvaPay.<br>
+                                2. Set up your account by providing basic business details.<br>
+                                3. Complete the KYC process and activate your GurutvaPay account.<br>
+                                4. Integrate the GurutvaPay payment gateway on your website or app.<br><br>
+                                <br>
+                                For detailed integration steps, visit our developer guide.
+                            </p>
+                        </div>
+                        <i class="faq-toggle bi bi-chevron-right"></i>
+                    </div>
+                    <!-- End Faq item-->
+
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- /Faq Section -->
+
+    <!-- Call To Action 2 Section -->
+</main>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+    });
+</script>
+
+<!-- ------ swiper 1 end here ------- -->
+
+
+<!-- ------ swiper 2 js here ------- -->
+<script>
+    var swiper2 = new Swiper(".mySwiper2", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        // loop: true,
+        autoplay: {
+            delay: 4500,
+            disableOnInteraction: false,
+        },
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 1,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination2", // Unique pagination class
+            clickable: true,
+        },
+    });
+
+</script>
+
+
+<!-- Scroll Top -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %} {% endblock javascripts %}

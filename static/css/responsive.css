@@ -1,0 +1,172 @@
+@media(max-width:800px){
+
+.developer-content{
+
+         flex-flow: column-reverse;
+}
+.developer-section{
+    flex-flow: column;
+}
+
+.developer-card{
+    width: 100%;
+    }
+    .position-absolute{
+    position:relative !important;
+    }
+    .translate-middle {
+    transform: translate(-50%, 0) !important;
+}
+.plugin-section{
+    padding: 0px 40px 40px;}
+}
+
+
+
+.mt-5{
+margin:0 !important;
+}
+
+.plugin-title {
+    font-size: 20px;
+    }
+
+
+.res-head{
+font-size:20px;
+
+.flex-box{
+    flex-direction: column-reverse;
+
+}
+
+
+}
+
+@media (max-width: 768px) {
+
+.about{
+padding:0;
+}
+
+.my-5{
+margin:0;
+
+}
+
+.features .nav-tabs {
+width:100%;
+}
+
+
+.mt-lg-100{
+margin:0 !important;
+
+}
+    .swiper-slide img {
+        width: 100%;
+
+    }
+
+
+
+
+.section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+
+.feature-tab{
+  margin-top: 20px;
+}
+
+
+.banner{
+
+height:880px;
+
+align-items:unset;
+
+}
+
+.banner-content{
+margin-top:355px;
+}
+
+.margin-top{
+margin-top:540px;
+}
+
+
+
+.banner-hm{
+  background: url("../img/banners/banner-1-mb.png") no-repeat center center;
+  background-size: cover;
+}
+
+.banner-abt {
+  background: url("../img/banners/banner-about-mb.png") no-repeat center center;
+  background-size: cover;
+
+}
+
+.banner-blog {
+  background: url("../img/banners/blog-banner-mb.jpg") no-repeat center center;
+  background-size: cover;
+
+}
+
+.banner-contact {
+  background: url("../img/banners/banner-contact-mb.png") no-repeat center center;
+  background-size: cover;
+
+}
+
+.banner-services {
+  background: url("../img/banners/banner-services-mb.png") no-repeat center center;
+  background-size: cover;
+
+}
+
+
+
+.banner-content .text p{
+    font-size: unset;
+
+}
+/*
+.hero {
+padding-top:60px;
+}
+*/
+
+----------
+vikas
+----------
+.contact-b{
+    padding: 130px 0;
+    height: 750px;
+}
+
+.contact-p{
+    padding: 130px 0 0;
+    }
+.ser-tab-container{
+    padding: 0px 30px 30px 30px}
+
+}
+
+
+@media(max-width:400px){
+
+.banner{
+
+height:880px;
+
+align-items:unset;
+
+}
+
+}

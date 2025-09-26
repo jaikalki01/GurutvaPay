@@ -1,0 +1,197 @@
+{% extends "layouts/jaikalki_layout.html" %}
+
+{% block meta %}
+    <meta name="description" content="Stay updated with the latest news and insights from GurutvaPay. Explore our blog for expert advice, company updates, and fintech trends.">
+<meta name="keywords" content="GurutvaPay blog, digital payments blog India, fintech insights, UPI trends 2025, international payment collection, payment gateway tips, merchant payment strategies, cross-border payments India, e-commerce payments blog, secure payment technologies, business payments blog, UPI benefits for businesses, payment API articles, global payments India, mobile payments insights, refunds and settlements blog, payment gateway innovations, fintech best practices, digital transaction trends, online payment solutions India">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="GurutvaPay Blog - Insights and Updates">
+    <meta property="og:description" content="Discover the latest trends, updates, and fintech innovations from GurutvaPay.">
+    <meta property="og:image" content="{{ url_for('static', filename='img/Gravity_logo.png', _external=True) }}">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:title" content="GurutvaPay Blog - Insights and Updates">
+    <meta name="twitter:description" content="Discover the latest trends, updates, and fintech innovations from GurutvaPay.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.gurutvapay.com/blog">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "GurutvaPay Blog",
+  "url": "https://www.gurutvapay.com/blog",
+  "description": "Stay updated with the latest news and insights from GurutvaPay. Explore our blog for expert advice, company updates, and fintech trends.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "GurutvaPay",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.gurutvapay.com/static/img/Gravity_logo.png"
+    }
+  },
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Why Every Business Should Use UPI",
+      "url": "https://www.gurutvapay.com/why-indian-businesses-trust-upi-and-you-should-too",
+      "image": "https://www.gurutvapay.com{{ url_for('static', filename='img/blog/blog-2.jpg') }}",
+      "datePublished": "2025-07-15",
+      "author": {
+        "@type": "Organization",
+        "name": "GurutvaPay"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GurutvaPay"
+      },
+      "description": "Discover the advantages of UPI for businesses of all sizes in India."
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Benefits of UPI for Small Businesses",
+      "url": "https://www.gurutvapay.com/benefits-of-upi-for-small-businesses",
+      "datePublished": "2025-05-22",
+      "author": {
+        "@type": "Organization",
+        "name": "GurutvaPay"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GurutvaPay"
+      },
+      "description": "Learn how UPI is enabling small businesses to thrive in the digital economy."
+    }
+  ]
+}
+</script>
+
+{% endblock %}
+
+{% block title %}Blog - GurutvaPay{% endblock %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<main class="main">
+    <section class="banner banner-blog" alt="GurutvaPay Blog Banner">
+       <div class="container">
+            <div class="banner-content">
+                <div class="text">
+                    <h3 data-aos="zoom-out" data-aos-delay="300">Welcome to the GurutvaPay Blog</h3>
+                    <h1 data-aos="zoom-out" data-aos-delay="400">Insights, Innovations, and Ideas in Digital Payments</h1>
+                    <p data-aos="zoom-out" data-aos-delay="500">Stay updated with the latest trends, tips, and technologies shaping the future of finance. At GurutvaPay, we’re more than just a payment solution — we’re your partner in navigating the fast-changing world of digital transactions. Dive into expert articles, product updates, and thought leadership pieces that help you stay informed and empowered.</p>
+                    <a href="/contact" class="btn" data-aos="fade-up" data-aos-delay="600">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Section -->
+    <section class="blog section">
+        <div class="container">
+
+
+            <div class="flex">
+
+          <div class="row gy-4">
+                <!-- Repeat blog cards -->
+
+              <div class="col-lg-4 col-md-8" data-aos="fade-up" data-aos-delay="200">
+    <div class="card h-100 m-card">
+        <div class="img-blog">
+        <a href="/collection-services-ecommerce-0-95-gst">
+            <img src="{{ url_for('static', filename='img/blog/e-commerce.jpg') }}" alt="E-commerce Collection Services with GurutvaPay" class="card-img-top" style="height: 200px; object-fit: cover;">
+        </a>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title" style="font-size: 17px; font-weight: 600; font-family: Arial, sans-serif;">
+                Save More on E-Commerce Collections with GurutvaPay
+            </h5>
+            <p class="card-text" style="font-size: 1rem;">
+                Discover how GurutvaPay helps e-commerce businesses cut costs with collection services at just 0.95% + GST…
+            </p>
+            <p style="font-size: 0.9rem;"><b>Date:</b> 04/09/2025</p>
+            <a href="/collection-services-ecommerce-0-95-gst" class="link-opacity-100-hover fs-5">
+                Read More &nbsp;&nbsp; <i class="fa-solid fa-arrow-right pt-arrow"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+              <div class="col-lg-4 col-md-8" data-aos="fade-up" data-aos-delay="200">
+    <div class="card h-100 m-card">
+        <div class="img-blog">
+        <a href="/international-collection">
+            <img src="{{ url_for('static', filename='img/blog/international-collection.jpg') }}" alt="International Collection with GurutvaPay" class="card-img-top" style="height: 200px; object-fit: cover;">
+        </a>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title" style="font-size: 17px; font-weight: 600; font-family: Arial, sans-serif;">
+                International Collection Made Easy with GurutvaPay
+            </h5>
+            <p class="card-text" style="font-size: 1rem;">
+                Learn how GurutvaPay simplifies global payment collection for businesses and freelancers…
+            </p>
+            <p style="font-size: 0.9rem;"><b>Date:</b> 31/08/2025</p>
+            <a href="/international-collection" class="link-opacity-100-hover fs-5">
+                Read More &nbsp;&nbsp; <i class="fa-solid fa-arrow-right pt-arrow"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+               <div class="col-lg-4 col-md-8" data-aos="fade-up" data-aos-delay="200">
+    <div class="card h-100 m-card">
+        <a href="/why-indian-businesses-trust-upi-and-you-should-too">
+            <img src="{{ url_for('static', filename='img/blog/UPI.jpg') }}" alt="Blog 1" class="card-img-top" style="height: 200px; object-fit: cover;">
+        </a>
+        <div class="card-body">
+            <h5 class="card-title" style="font-size: 17px; font-weight: 600; font-family: Arial, sans-serif;">
+                Why Every Business Should Use UPI
+            </h5>
+            <p class="card-text" style="font-size: 1rem;">
+                Discover the advantages of UPI for businesses of all sizes in India…
+            </p>
+            <p style="font-size: 0.9rem;"><b>Date:</b> 15/07/2025</p>
+            <a href="/why-indian-businesses-trust-upi-and-you-should-too" class="link-opacity-100-hover fs-5">
+                Read More &nbsp;&nbsp; <i class="fa-solid fa-arrow-right pt-arrow"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+                <div class="col-lg-4 col-md-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 m-card">
+                        <a href="/benefits-of-upi-for-small-businesses">
+                            <img src="{{ url_for('static', filename='img/blog/small-business-upi.jpg') }}" alt="Blog 1" class="card-img-top" style="height: 200px; object-fit: cover;">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-size: 17px; font-weight: 600; font-family: Arial, sans-serif;">Benefits of UPI for Small Businesses</h5>
+                            <p class="card-text" style="font-size: 1rem;">Learn how UPI is enabling small businesses to thrive in the digital economy...</p>
+                            <p style="font-size: 0.9rem;"><b>Date:</b> 22/05/2025</p>
+                            <a href="/benefits-of-upi-for-small-businesses"  class="link-opacity-100-hover fs-5"> Read More &nbsp&nbsp <i class="fa-solid fa-arrow-right pt-arrow"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
+
+            </div>
+
+        </div>
+    </section>
+</main>
+{% endblock content %}
+
+{% block javascripts %}
+<!-- You can add blog-specific JS here if needed -->
+{% endblock javascripts %}

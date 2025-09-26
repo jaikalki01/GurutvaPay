@@ -1,0 +1,1523 @@
+{% extends "layouts/jaikalki_layout.html" %}
+
+{% block meta %}
+    <meta name="description" content="Discover GurutvaPay's secure and reliable online payment solutions. We offer UPI payments, merchant services, and fast settlements for businesses.">
+    <meta name="keywords" content="payment gateway services, UPI payments, merchant services, fast settlements, online payment solutions">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Our Services - GurutvaPay Payment Solutions">
+    <meta property="og:description" content="Explore our secure and fast online payment solutions, including UPI payments, merchant services, and seamless transactions.">
+    <meta property="og:image" content="{{ url_for('static', filename='img/Gravity_logo.png', _external=True) }}">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:title" content="Our Services - GurutvaPay Payment Solutions">
+    <meta name="twitter:description" content="Explore our secure and fast online payment solutions, including UPI payments, merchant services, and seamless transactions.">
+
+    <!-- Canonical URL (Specific to Services Page) -->
+    <link rel="canonical" href="https://www.gurutvapay.com/services">
+
+<style>
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5faff;
+  color: #000;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px 10%;
+  background: linear-gradient(to right, #f4f8ff, #ffffff);
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.highlight {
+  color: #1664ff;
+}
+
+.subheadline {
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.description {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+}
+
+.btn-primary {
+  padding: 14px 24px;
+  background: #1664ff;
+  color: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-secondary {
+  padding: 14px 24px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.bank-partners {
+  margin-top: 40px;
+}
+
+.bank-partners p {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.partners-logos img {
+  height: 32px;
+  margin-right: 16px;
+  vertical-align: middle;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 500px;
+  position: relative;
+  text-align: center;
+}
+
+.hero-image .phone{
+  max-width: 100%;
+  height: 400px !important;
+  border-radius: 12px;
+}
+
+.country-flags {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(20%, 20%);
+  max-width: 240px;
+}
+
+.country-flags p {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.flags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.flags img {
+  width: 30px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+    .gurutvapay-built-for {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.gurutvapay-built-for h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.gurutvapay-built-for .highlight {
+  color: #1664ff;
+}
+
+.card-grid {
+  display: flex;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border:none !important;
+}
+
+.card1,.card2{
+width:50%;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.arrow {
+  font-size: 18px;
+}
+
+    .payment-link-section {
+  background-color: #f5f8ff;
+  padding: 60px 10%;
+}
+
+.payment-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+}
+
+.payment-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.option-label {
+  font-size: 14px;
+  color: #0070f3;
+  font-weight: 600;
+}
+
+.payment-text h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.highlight-blue {
+  color: #1664ff;
+}
+
+.subtext {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #555;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.features-list li {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.payment-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.payment-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.payment-image{
+width:40%;
+}
+
+/* How It Works Section */
+
+.how-it-works {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.how-it-works h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  text-align: center;
+}
+
+.step {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.step-number {
+  width: 36px;
+  height: 36px;
+  background: #1664ff;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 12px;
+  font-size: 16px;
+}
+
+.note {
+  font-size: 14px;
+  margin-top: 30px;
+  color: #444;
+}
+
+    .usd-account-section {
+  background-color: #ffffff;
+  padding: 60px 10%;
+}
+
+.usd-account-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+}
+
+.usd-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.usd-image{
+width:40%;
+}
+.usd-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.usd-text h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.usd-text .subtext {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #555;
+}
+
+.usd-text .features-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.usd-text .features-list li {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+    .why-gurutvapay-section {
+  background-color: #f0f5ff;
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.why-gurutvapay-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.why-gurutvapay-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  gap: 24px;
+  align-items: center;
+  width:60%;
+}
+.box-img{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.why-box {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.why-box h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.why-box p {
+  font-size: 15px;
+  color: #555;
+}
+
+.why-image img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+    .section-wrapper {
+      max-width: 1165px;
+      margin: auto;
+      background: white;
+      padding: 40px;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      margin-bottom:50px;
+    }
+
+    .section-t {
+      font-size: 32px;
+      font-weight: 700;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    .section-t span {
+      color: #2563eb; /* blue-600 */
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #64748b; /* gray-500 */
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: left;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .btn-blue {
+      background-color: #2563eb;
+      color: white;
+      padding: 10px 24px;
+      border: none;
+      border-radius: 9999px;
+      font-weight: 500;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .btn-blue:hover {
+      background-color: #1d4ed8;
+    }
+
+    .btn-outline {
+      background-color: white;
+      color: #1f2937;
+      padding: 10px 24px;
+      border: 1px solid #e2e8f0;
+      border-radius: 9999px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .btn-outline:hover {
+      border-color: #cbd5e1;
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .box {
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .box h3 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .gurutvapay-logo {
+      color: #2563eb;
+    }
+
+    .other-logo {
+      color: #ef4444;
+    }
+
+    .features-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: #334155; /* gray-700 */
+      font-size: 14px;
+    }
+
+    .features-list li::before {
+      content: "✓ ";
+      color: #2563eb;
+      margin-right: 4px;
+      font-size:30px;
+    }
+
+    @media (max-width: 768px) {
+      .comparison-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .faq-section {
+  background-color: #f8fafc;
+  padding: 3rem 1rem;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.faq-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.faq-section h2 span {
+  color: #2563eb;
+}
+
+.faq-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: white;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-question {
+  padding: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question:hover {
+  background-color: #f1f5f9;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 16px;
+  color: #334155;
+  font-size: 15px;
+  background-color: #f9fafb;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 100%;
+  padding: 16px;
+}
+
+.plus-minus {
+  font-size: 20px;
+  transition: transform 0.2s ease;
+}
+
+.faq-item.active .plus-minus {
+  transform: rotate(45deg);
+}
+
+.cta-box {
+  margin-top: 40px;
+  background: linear-gradient(to right, #2563eb, #3b82f6);
+  color: white;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cta-box h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cta-button {
+  background-color: white;
+  color: #2563eb;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+@media (min-width: 640px) {
+  .cta-button {
+    margin-top: 0;
+  }
+}
+
+.why-gurutvapay-section {
+  background-color: #fff;
+  padding: 60px 20px;
+}
+
+.why-gurutvapay-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  align-items: center;
+  gap: 40px;
+}
+
+.why-gurutvapay-text {
+  flex: 1 1 45%;
+}
+
+.why-gurutvapay-text h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.why-gurutvapay-text .bold {
+  font-weight: 800;
+}
+
+.why-gurutvapay-text .blue {
+  color: #2563eb;
+}
+
+.why-gurutvapay-text p {
+  font-size: 16px;
+  color: #4b5563;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.brand-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.brand-logos img {
+  height: 24px;
+  opacity: 0.8;
+}
+
+.why-gurutvapay-testimonial {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial-card {
+  background: linear-gradient(to bottom right, #2563eb, #3b82f6);
+  color: white;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 350px;
+  text-align: left;
+  position: relative;
+}
+
+.quote-icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.testimonial-text {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.testimonial-position {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 6px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  opacity: 0.5;
+  border-radius: 50%;
+  transition: opacity 0.3s;
+}
+
+.dot.active {
+  opacity: 1;
+}
+
+    .custom-hover:hover {
+    background-color: #AA60C8 !important;
+    color: #fff !important;
+    border:none;
+}
+
+    .custom-hover{
+       transition: all ease-in-out 0.5s;
+       cursor: pointer;
+    }
+
+    /* Tablet tweaks */
+@media (max-width: 1024px) {
+  .hero, .gurutvapay-built-for, .payment-link-section, .usd-account-section, .why-gurutvapay-section {
+    padding: 40px 4%;
+  }
+}
+
+@media (max-width: 900px) {
+  .why-gurutvapay-grid {
+    width: 100%;
+  }
+  .section-wrapper {
+    padding: 26px 2vw;
+  }
+}
+
+/* Mobile-first styles for everything below 768px */
+@media (max-width: 799px) {
+  body {
+    font-size: 15px;
+    padding: 0;
+  }
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 32px 2vw;
+    gap: 20px;
+  }
+  .hero-content {
+    max-width: 100%;
+    text-align: left;
+  }
+  .hero-image {
+    max-width: 100%;
+    margin-top: 22px;
+    padding: 0;
+    position: static;
+  }
+  .hero-image .phone {
+    height: 220px !important;
+    max-width: 100%;
+  }
+  .country-flags {
+    position: static;
+    margin: 18px auto 0;
+    transform: none;
+    max-width: 95vw;
+    padding: 12px;
+  }
+
+  .card-grid {
+    flex-direction: column !important;
+    /* For grids that use display: grid, fallback to block on mobile */
+    display: flex !important;
+    gap: 18px;
+    width: 100% !important;
+  }
+  .card1, .card2, .card {
+    width: 100% !important;
+    min-width: 0;
+    margin: 0 auto;
+  }
+  .card-overlay {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .gurutvapay-built-for,
+  .payment-link-section,
+  .usd-account-section,
+  .why-gurutvapay-section {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  .gurutvapay-built-for h2,
+  .payment-text h2,
+  .usd-text h2,
+  .why-gurutvapay-section h2,
+  .faq-section h2 {
+    font-size: 23px;
+  }
+
+  .payment-container,
+  .usd-account-container {
+    flex-direction: column-reverse;
+    gap: 26px;
+    align-items: stretch;
+  }
+  .payment-image,
+  .usd-image {
+    width: 100% !important;
+    min-width: 0;
+  }
+  .payment-text,
+  .usd-text {
+    min-width: 0;
+    width: 100%;
+  }
+  .how-it-works .steps {
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+
+  .why-gurutvapay-section {
+    text-align: left;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .why-gurutvapay-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px;
+    width: 100%;
+  }
+  .why-image img {
+    max-width: 96vw;
+    margin: 24px auto 0;
+  }
+  .box-img {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .section-wrapper {
+    padding: 14px 1vw;
+    margin: 0 10px;
+  }
+  .section-t {
+    font-size: 18px;
+  }
+  .comparison-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+  .faq-section,
+  .faq-container {
+    padding: 2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .faq-section h2 {
+    font-size: 21px;
+  }
+  .cta-box {
+    flex-direction: column;
+    padding: 15px 6px;
+    gap: 12px;
+    text-align: left;
+  }
+}
+
+/* Extra-small mobiles (Below 480px): shrink headers and paddings */
+@media (max-width: 480px) {
+  h1 { font-size: 25px !important; }
+  h2, .hero h2, .gurutvapay-built-for h2, .payment-text h2, .usd-text h2,
+  .section-t, .why-gurutvapay-section h2 {
+    font-size: 22px !important;
+    line-height: 1.3;
+  }
+  .hero-content,
+  .gurutvapay-built-for,
+  .payment-link-section,
+  .usd-account-section {
+    padding-left: 1vw !important;
+    padding-right: 1vw !important;
+  }
+  .faq-section h2, .section-t, .section-subtitle {
+    font-size: 18px !important;
+  }
+}
+
+</style>
+
+
+{% endblock %}
+
+{% block title %}Our Services - GurutvaPay{% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<main class="main">
+
+    <!--    banner section starts here-->
+
+     <section class="hero ">
+    <div class="hero-content">
+        <h3>International Payment</h3>
+      <h1>
+        Receive <span class="highlight">USD, EUR, GBP, AED</span><br/>
+        Right into Your INR Account
+      </h1>
+      <p class="subheadline">Instantly, Securely, Compliantly</p>
+      <p class="description">
+          international payments, enabling Indian freelancers and businesses to effortlessly receive funds from clients worldwide.
+      </p>
+      <div class="hero-buttons">
+        <a href="/contact" class="btn-secondary custom-hover">Get Started</a>
+      </div>
+
+    </div>
+
+    <div class="hero-image">
+      <img src="{{ url_for('static', filename='img/phone.png') }}" alt="Phone Dashboard" class="phone"/>
+      <div class="country-flags">
+        <p>100+ Countries Supported</p>
+        <div class="flags">
+          <img src="https://flagcdn.com/us.svg" alt="USA" />
+          <img src="https://flagcdn.com/eu.svg" alt="EU" />
+          <img src="https://flagcdn.com/au.svg" alt="Australia" />
+          <img src="https://flagcdn.com/ca.svg" alt="Canada" />
+          <img src="https://flagcdn.com/gb.svg" alt="UK" />
+          <img src="https://flagcdn.com/in.svg" alt="India" />
+          <img src="https://flagcdn.com/ae.svg" alt="UAE" />
+          <img src="https://flagcdn.com/za.svg" alt="South Africa" />
+          <img src="https://flagcdn.com/ie.svg" alt="Ireland" />
+          <img src="https://flagcdn.com/sa.svg" alt="Saudi Arabia" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section class="gurutvapay-built-for">
+  <h2>Designed for <span class="highlight">These Businesses</span></h2>
+  <div class="card-grid mb-4">
+    <div class="card1 card">
+      <img src="{{ url_for('static', filename='img/exporters.jpg') }}" alt="Exporters" />
+      <div class="card-overlay">
+        <span>Exporters</span>
+        <div class="arrow">→</div>
+      </div>
+    </div>
+    <div class="card2 card">
+      <img src="{{ url_for('static', filename='img/Consultancies.jpg') }}" alt="Agencies & Consultancies" />
+      <div class="card-overlay">
+        <span>Agencies & Consultancies</span>
+        <div class="arrow">→</div>
+      </div>
+    </div>
+  </div>
+       <div class="card-grid">
+    <div class="card">
+      <img src="{{ url_for('static', filename='img/Freelancers.jpg') }}" alt="Freelancers" />
+      <div class="card-overlay">
+        <span>Freelancers</span>
+        <div class="arrow">→</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{{ url_for('static', filename='img/Ecommerce.jpg') }}" alt="D2C Ecommerce" />
+      <div class="card-overlay">
+        <span>D2C Ecommerce</span>
+        <div class="arrow">→</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{{ url_for('static', filename='img/Walmart-Resellers.jpg') }}" alt="Amazon & Walmart Resellers" />
+      <div class="card-overlay">
+        <span>Amazon & Walmart Resellers</span>
+        <div class="arrow">→</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="payment-link-section">
+  <div class="payment-container mx-2">
+    <div class="payment-text">
+      <p class="option-label">Option - 1</p>
+      <h2>Get Paid via <br><span class="highlight-blue">Payment Link</span></h2>
+      <p class="subtext">
+        Perfect for freelancers, consultants, and businesses with direct clients. No technical setup. No foreign bank account required. Just share a link and get paid.
+      </p>
+      <ul class="features-list">
+        <li> Accept card payments from 100+ countries</li>
+        <li> Track all payments in one place</li>
+        <li> Get instant alerts when you receive payment</li>
+        <li> Fully compliant with RBI regulations</li>
+      </ul>
+      <div class="payment-buttons">
+        <a href="/contact" class="btn-secondary custom-hover">Contact Us</a>
+      </div>
+    </div>
+    <div class="payment-image">
+      <img src="{{ url_for('static', filename='img/payment-link-1.jpg') }}" alt="Payment Link Image" />
+    </div>
+  </div>
+
+  <div class="how-it-works">
+    <h3>How It Works:</h3>
+    `<div class="steps mx-2">
+      <div class="step">
+        <div class="step-number">1</div>
+        <p><strong>Create a Payment Link</strong><br/>from your dashboard</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <p><strong>Send it to your client</strong><br/>via email, WhatsApp or invoice</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <p><strong>Client pays</strong><br/>via credit card (Visa/Mastercard/<br>American Express/<br>Diners/JCB/<br>Discover)</p>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <p><strong>Receive notification</strong><br/>when the payment arrives</p>
+      </div>
+      <div class="step">
+        <div class="step-number">5</div>
+        <p><strong>Settles in INR</strong><br/>the payment is credited in 1 business day</p>
+      </div>
+    </div>
+    <p class="note">
+        <strong>Trusted by:</strong> freelancers, small businesses, exporters, importers, consultants, and marketing agencies.
+    </p>
+  </div>
+</section>
+
+    <section class="usd-account-section">
+  <div class="usd-account-container mx-2">
+    <div class="usd-image">
+      <img src="{{ url_for('static', filename='img/foreign-payment-1.jpg') }}" alt="USD Account Image" />
+    </div>
+    <div class="usd-text">
+      <p class="option-label">Option - 2</p>
+      <h2>Receive Foreign Payment via <br><span class="highlight-blue">Virtual USD Account</span></h2>
+      <p class="subtext">
+       Perfect for freelancers, exporters, and businesses accepting international payments. Instantly get a virtual account in your name—without ever leaving India.
+      </p>
+      <ul class="features-list">
+        <li> No PayPal, SWIFT or wire needed</li>
+        <li> No monthly fees</li>
+        <li> Better FX rates</li>
+        <li> Settles within 1 business day</li>
+        <li> Supports payouts from platforms and direct clients</li>
+      </ul>
+      <div class="payment-buttons">
+        <a href="/contact" class="btn-secondary custom-hover">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="how-it-works">
+    <h3>How It Works:</h3>
+    <div class="steps mx-2">
+      <div class="step">
+        <div class="step-number">1</div>
+        <p><strong>Open a free USD virtual account</strong><br/>With minimal KYC documents</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <p><strong>Add as payout method</strong><br/>on your platforms</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <p><strong>Receive international payments</strong><br/>Via local bank transfer into your USD account</p>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <p><strong>Get paid in INR</strong><br/>Directly into your Indian bank account within 1 business day</p>
+      </div>
+    </div>
+    <p class="note">
+      <strong>Perfect for:</strong> freelancers, exporters, platform earners, and service businesses working with international clients.
+    </p>
+  </div>
+</section>
+
+    <section class="why-gurutvapay-section container">
+  <h2>Your Trusted Partner for <span class="highlight-blue">International Payments</span></h2>
+      <div class="box-img">
+  <div class="why-gurutvapay-grid">
+    <div class="why-box">
+      <h4>Competitive Rates</h4>
+      <p>Offers the best rates for inward remittance with 0% markup, providing you the best value for your inward remittances.</p>
+    </div>
+    <div class="why-box">
+      <h4>Transparent Fee Structure</h4>
+      <p>Our transparent fees show the exact INR amount you'll receive, with no hidden charges and the best exchange rates.</p>
+    </div>
+    <div class="why-box">
+      <h4>Fast Onboarding & Settlement</h4>
+      <p>Receive international payments in India within 24–48 hours. Get started in 10 minutes—submit your first invoice and start accepting payments online.</p>
+    </div>
+    <div class="why-box">
+      <h4>24/7 Support</h4>
+      <p>We’re just a message away. Get real-time assistance for all your payment needs, anytime, anywhere.</p>
+    </div>
+  </div>
+      <div class="why-image">
+      <img src="{{ url_for('static', filename='img/Choose-1.jpg') }}" alt="Mobile UI and flags" />
+    </div>
+      </div>
+</section>
+
+     <section class="section-wrapper">
+    <h2 class="section-t">Still Paying More? <span>Time to Compare</span></h2>
+    <p class="section-subtitle">
+      Here’s what makes this service stand out from traditional foreign remittance providers.
+    </p>
+    <div class="button-group">
+<!--      <button class="btn-outline">Contact Us</button>-->
+              <a href="/contact" class="btn-secondary custom-hover">Contact Us</a>
+    </div>
+    <div class="comparison-grid">
+      <!-- GurutvaPay Box -->
+      <div class="box">
+        <h3><span class="gurutvapay-logo">Smart Payment</span> Option</h3>
+        <ul class="features-list">
+          <li>Transaction fee: 1%</li>
+          <li>0% Forex markup</li>
+          <li>24hrs Customer Support</li>
+          <li>No Chargeback/Disputes</li>
+          <li>No Funds block</li>
+        </ul>
+      </div>
+      <!-- Other Providers Box -->
+      <div class="box">
+        <h3><span class="other-logo">What You</span> Usually Get</h3>
+        <ul class="features-list">
+          <li>Transaction fee: >3%</li>
+          <li>Minimum 3% Forex markup</li>
+          <li>24hrs customer support</li>
+          <li>Chargeback/Disputes</li>
+          <li>Funds block</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+
+    <section class="faq-section">
+  <div class="faq-container">
+    <h2>Frequently Asked <span>Questions</span></h2>
+    <div class="faq-item">
+      <div class="faq-question">
+        How To Receive International Payments in An Indian Bank Account?
+        <span class="plus-minus">+</span>
+      </div>
+      <div class="faq-answer">
+       To receive international payments in your Indian bank account, simply share the details of your international virtual account with the sender. This will include details like your virtual bank account number, IFSC code, and SWIFT/BIC codes. With your Forex dashboard, you can streamline this process and perform the entire transfer online.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        How To Accept International Payments in India As A Freelancer?
+        <span class="plus-minus">+</span>
+      </div>
+      <div class="faq-answer">
+As a freelancer, you can easily accept international payments through a dedicated forex service. It offers lower fees and faster transfers compared to traditional methods, helping you focus on your work without worrying about payment delays. Simply share your invoice, and the service will ensure the payment arrives in your bank account.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Is it a payment gateway? Or does it specialize in SWIFT wire transfers to accept international payments in India?        <span class="plus-minus">+</span>
+      </div>
+      <div class="faq-answer">
+
+          This service is not a traditional payment gateway. It's more akin to a SWIFT wire transfer provider that helps Indian businesses accept international payments with ease. Payment gateways are generally better suited for online card payments or digital transactions, whereas SWIFT-based solutions are designed for handling international wire transfers. These are particularly effective for businesses that process large volumes of international payments or work with global clients who prefer direct bank-to-bank transfers over online gateways.<br><br>
+
+          The greatest advantage of using a SWIFT wire transfer solution is its lower forex cost for inward remittances. Most payment gateways involve higher charges due to intermediary costs and multi-layered processing, while SWIFT transfers tend to be more affordable. Business-to-business firms using such solutions benefit from direct transfers with fewer delays, better fee transparency, and reduced foreign exchange margins—ultimately leading to higher profitability. This makes it a strong choice for companies seeking cost-effective, secure, and reliable options for receiving international payments.
+
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        What is the best way to accept international payments?
+        <span class="plus-minus">+</span>
+      </div>
+      <div class="faq-answer">
+Out of many options for receiving international payments, a global virtual bank account is considered to be the best. This is because a virtual bank account allows you to receive payments in the currency of the payment transfer, using (usually free) domestic methods of funds transfer. To learn more about how virtual bank accounts work and why they are considered one of the best ways to accept international payments.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        How Much Does It Cost to Accept International Payments in India?
+        <span class="plus-minus">+</span>
+      </div>
+      <div class="faq-answer">
+
+          Our transparent and competitive pricing structure allows clients to accept international payments without hidden fees. We offer 0% markup on currency conversions, using live exchange rates, while the payment processing fee is as low as 1%. This makes the service significantly more affordable than traditional banks or payment processors.<br><br>
+
+          It also helps businesses avoid unwanted banking overheads, ensuring they retain a larger share of their payments. By simplifying the cost structure and offering full clarity on applied forex rates, this approach makes international transactions less uncertain for businesses. The low-margin model reduces operational costs and improves cash flow management, making it a preferred choice for Indian businesses engaged in global trade.
+
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Does the Forex Fee include GST?
+        <span class="plus-minus">+</span>
+      </div>
+      <div class="faq-answer">
+
+          No, the forex fee charged by this service does not include GST or any other kind of tax. In general, GST is applied only to the processing fees, not the principal amount. It is calculated separately based on applicable government regulations. Clients are informed of all applicable taxes before payment processing. This ensures complete transparency, so every charge is clearly understood before accepting international payments.<br><br>
+
+          The service is built around transparency—there are no hidden charges or unexpected deductions. Businesses benefit from a straightforward cost structure that simplifies financial planning. Keeping the forex fee exclusive of GST ensures compliance with Indian tax regulations while offering businesses a clear and accurate breakdown of costs.
+
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        What Documents Are Needed to Accept International Payments in India?
+        <span class="plus-minus">+</span>
+      </div>
+      <div class="faq-answer">
+Accepting international payments in India is a streamlined process and typically requires only basic documents during the onboarding stage. No additional paperwork is needed for individual transactions once the initial onboarding is complete. Below is a list of documents generally required:<br><br>
+
+          For Onboarding:<br>
+<b>Company Name / Legal Name:</b> The registered name of your business.<br>
+
+<b>Doing Business As (DBA) / Brand Name:</b> For sole proprietors, the trade name under which they operate.<br>
+
+<b>Company Website:</b> A live website that clearly describes your products or services.<br>
+
+<b>Product or Service Description:</b> A brief overview of the business offerings.<br>
+
+<b>Company Email:</b> An official email linked to your company domain.<br>
+
+<b>Permanent Address:</b> The registered office address of the business.<br>
+
+<b>Bank Account Details:</b> Business bank account information for receiving international funds.<br><br><br>
+
+Documents Required for Transactions:<br>
+<b>Owner's PAN Card & Aadhaar Card:</b> For identity verification of the business owner.<br>
+
+<b>GST Certificate:</b> Required if your business is registered under GST.<br>
+
+<b>Company PAN:</b> For verifying the company’s tax registration.<br><br><br>
+
+          The onboarding process is designed to be simple and compliant with Indian regulations. Once completed, businesses can start accepting international payments without the need for repeated documentation.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        What is the transaction time involved in accepting international payments in India?
+        <span class="plus-minus">+</span>
+      </div>
+      <div class="faq-answer">
+
+          Fast transaction processing is one of the key attributes that make this international payment solution stand out, enabling businesses to acquire funds with a short turnaround time.<br><br>
+
+          For the very first post-onboarding transaction, payments are processed within 24–48 working hours, thanks to a streamlined onboarding process and advanced SWIFT infrastructure that enables fast cross-border payments.<br><br>
+
+          For all subsequent transactions, the processing time can be even faster—within 24 working hours. This ensures businesses maintain healthy cash flows and avoid delays in receiving international payments.<br><br>
+
+          This solution offers a significant time advantage over traditional banks or payment gateways, which typically take 1–5 business days to process international transactions. As a result, it becomes an ideal choice for businesses that need quick access to funds for operations, payroll, or inventory management.<br><br>
+
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Does the Forex Service Offer a Multi-Currency Account Besides USD?
+        <span class="plus-minus">+</span>
+      </div>
+      <div class="faq-answer">
+
+
+          Plans are underway to launch multi-currency accounts across the board, which will help solidify this payment solution’s position among the leading providers of cross-border payment services for businesses in India. Currently, account services are available only in USD, but work is in progress to expand the offering to include 12 additional currencies, enabling businesses to accept payments from a broader global client base.<br><br>
+
+          These payment services are ideal for Indian businesses with clients in regions such as Europe, the Middle East, and Asia-Pacific, where major currencies like EUR, GBP, AED, and JPY are commonly used. With multi-currency support, the need for frequent currency conversions—which can lead to higher forex fees and longer processing times—can be minimized.<br><br>
+
+          For businesses involved in international trade, this expanded currency support will simplify transactions and strengthen relationships with clients who prefer to pay in their local currency.<br><br>
+      </div>
+
+      </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Is providing an invoice compulsory while accepting international payments in India?
+        <span class="plus-minus">+</span>
+      </div>
+      <div class="faq-answer">
+Yes, providing an invoice is mandatory to accept international payments in India. This requirement helps ensure that the transaction complies with regulatory guidelines and goes through smoothly.<br><br>
+The invoice is a formal record of the payment, including all the necessary information such as the business name, services or products provided, amount due, and payment terms. It helps establish the purpose of the international transaction, which is crucial for meeting Reserve Bank of India (RBI) compliance and avoiding any delays or rejections in processing the payment.<br><br>
+Clear and accurate invoices to the clients create trust, while providing a transparent paper trail for audit and financial reporting. Proper documentation is important to streamline transactions and ensure smooth cross-border payments.<br><br>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Is the Forex Fee a One-Time or Recurring Charge?
+        <span class="plus-minus">+</span>
+      </div>
+      <div class="faq-answer">
+
+          The forex fee is a one-time charge applied to each transaction. It is incurred when a client transfers funds to a virtual account and then withdraws the amount to their Indian bank account.<br><br>
+
+Unlike subscription-based fees or monthly charges common with some payment gateways, this one-time transaction fee model ensures that businesses only pay for the services they use.<br><br>
+
+This pay-as-you-go structure is especially beneficial for businesses with irregular international payment volumes, as it eliminates unnecessary recurring costs while maintaining full transparency. Additionally, there are no hidden charges—only the stated margin on forex plus applicable taxes like GST—offering complete clarity on costs.<br><br>
+
+The fee structure is straightforward and transaction-based, making it a cost-effective solution for managing cross-border payments. Its flexibility makes it ideal for startups and large enterprises alike, especially those seeking to streamline their international payment processes.<br><br>
+
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+       What Currencies Can Be Processed to Accept International Payments in India?
+        <span class="plus-minus">+</span>
+      </div>
+      <div class="faq-answer">
+This forex service supports inward remittances in 30+ currencies, giving businesses a wide range of options to accept international payments. Supported currencies include all major global currencies such as:<br><br>
+USD - United States Dollar<br>
+GBP - British Pound Sterling<br>
+EUR - Euro<br>
+AUD - Australian Dollar<br>
+CAD - Canadian Dollar<br><br>
+
+This broad currency support allows businesses to receive payments from clients across different continents—North America, Europe, Asia, and Australia—without the need for multiple bank accounts or payment service providers. The payment process is simplified by consolidating multiple currencies into one streamlined platform, making international transactions more efficient and accessible.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Who Issues FIRC?
+        <span class="plus-minus">+</span>
+      </div>
+      <div class="faq-answer">
+
+          An FIRC (Foreign Inward Remittance Certificate) is an important document required to receive international payments in India. It serves as proof of the receipt of foreign currency and is often requested by regulatory bodies such as the RBI and the Income Tax Department for compliance and reporting purposes.<br><br>
+
+When an international payment is received, the inward remittance is facilitated by JP Morgan, USA. While the transaction passes through JP Morgan’s secure network, the actual funds are credited directly to the recipient’s Indian bank account. The FIRC is issued by the Indian bank where the amount is ultimately deposited.<br><br>
+
+This setup ensures a smooth and hassle-free process for businesses receiving international funds. There are no extra charges for routing payments through this channel, and the entire backend—from international transfer to final deposit—is handled in full compliance with Indian financial regulations. Businesses can focus on their operations while the complexities of cross-border payment processing are managed seamlessly in the background.<br><br>
+
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+
+          Can a Forex Service Help Proprietorship or Sole Owners Onboard for Accepting International Payments in India?
+
+        <span class="plus-minus">+</span>
+      </div>
+      <div class="faq-answer">
+
+          Yes, sole proprietors in India can receive international payments through this solution. The platform is designed to support a wide range of business entities—including sole proprietors, small businesses, and larger corporations. Whether you run an online store, offer consulting services, or operate any other type of business, this solution offers an efficient and compliant method for managing cross-border payments.<br><br>
+
+For sole proprietors, the process is simple and straightforward, with no unnecessary barriers. However, basic documentation is required, such as a GST certificate or a Shop and Establishment certificate, to verify the legitimacy of the business and ensure compliance with Indian regulatory frameworks for foreign exchange transactions.<br><br>
+
+While many traditional payment platforms cater primarily to large enterprises, this solution recognizes the growing presence of freelancers, independent professionals, and small business owners engaging in global commerce. The onboarding process for sole proprietors is streamlined and hassle-free, enabling quick access to international payment features without complex paperwork.<br><br>
+
+It allows businesses to receive payments in major global currencies like USD, EUR, GBP, and more—securely and affordably. Whether you're a freelancer, independent contractor, or entrepreneur, this platform provides a reliable and easy-to-use solution for accepting foreign remittances and expanding your reach in the global economy.<br><br>
+
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Is a GST Certificate Needed for Inward Remittance?
+        <span class="plus-minus">+</span>
+      </div>
+      <div class="faq-answer">
+
+          The GST certificate serves as official proof that a business is registered with the Goods and Services Tax Department and is essential for handling inward remittances from international clients in compliance with Indian tax regulations. This requirement applies to all businesses, including sole proprietors, ensuring they can legally receive payments from foreign clients without complications from tax authorities.<br><br>
+
+In cases where a sole proprietor does not possess a GST certificate, a Shop and Establishment certificate can be accepted as an alternative. This document confirms that the business is properly registered and operates under applicable local laws, enabling smoother onboarding and transaction processing.<br><br>
+
+To maintain transparency and ensure compliance, the remittance process requires one of these valid documents. This helps prevent delays or roadblocks in receiving international payments and ensures that businesses remain in good standing with Indian regulatory authorities, avoiding issues related to tax and foreign exchange regulations.<br><br>
+
+     </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Which account will the money come into?
+        <span class="plus-minus">+</span>
+      </div>
+      <div class="faq-answer">
+
+          The money will be credited directly to your chosen Indian bank account. When businesses receive international payments, the process involves several steps to ensure that transactions are secure, efficient, and fully compliant.<br><br>
+
+Initially, when a client initiates a payment, the funds are routed through a trusted banking intermediary, such as JP Morgan, which acts as a secure channel for transferring money from the foreign sender to the recipient in India. As the world’s largest exchange bank, JP Morgan provides a strong infrastructure to guarantee safe and smooth fund transfers.<br><br>
+
+Once the transfer is processed, the funds are deposited into your preferred Indian bank account—the one you use for business transactions. This offers flexibility and convenience, as you can link any Indian bank account to receive your international payments. The process is smooth, and there are no additional fees for transferring funds between banks.<br><br>
+
+There is no need for multiple intermediary accounts. The funds are transferred directly to your business account, without unnecessary delays. The system is designed to remove the complexity from cross-border payments, allowing businesses to access their money quickly and efficiently.<br><br>
+
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Are there any charges for holding the funds in the virtual account for 60 days?
+        <span class="plus-minus">+</span>
+      </div>
+      <div class="faq-answer">
+
+          No, there are no fees charged for holding funds in the virtual account for up to 60 days. This feature offers businesses valuable flexibility in managing their international payments, allowing them to hold funds for an extended period and giving them greater control over when and how to transfer money to their Indian bank accounts.<br><br>
+
+Whether the goal is to consolidate multiple payments or to time the transfer based on cash flow or business strategy, this zero-cost holding option provides an efficient and cost-effective solution.<br><br>
+
+Unlike many other payment platforms and financial services that charge storage fees for holding funds in virtual accounts, this solution allows businesses to safely retain funds without incurring any additional costs. It’s a highly beneficial feature for businesses handling cross-border payments and looking to optimize financial operations without extra fees.
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+</section>
+
+
+</main>
+
+<!-- JavaScript for Tab Functionality -->
+<script>
+    function serTabShow(event, tabId) {
+        var tabs = document.querySelectorAll('.ser-tab-panel');
+        var buttons = document.querySelectorAll('.ser-tab-item');
+        // Hide all tabs and remove active class from buttons
+        tabs.forEach(tab => tab.style.display = 'none');
+        buttons.forEach(btn => btn.classList.remove('active'));
+        // Show the selected tab and highlight the button
+        document.getElementById(tabId).style.display = 'block';
+        event.currentTarget.classList.add('active');
+    }
+    // Show only the first tab by default on page load
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('.ser-tab-panel').forEach(tab => tab.style.display = 'none');
+        document.getElementById('ser-tab-payment-collection').style.display = 'block';
+    });
+</script>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach((question) => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach((el) => {
+          el.classList.remove('active');
+        });
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+{% endblock javascripts %}

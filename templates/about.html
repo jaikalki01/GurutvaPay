@@ -1,0 +1,264 @@
+{% extends "layouts/jaikalki_layout.html" %}
+
+
+{% block meta %}
+    <meta name="description" content="Learn more about GurutvaPay, a secure and fast online payment gateway designed for businesses. Join us for seamless transactions.">
+    <meta name="keywords" content="about GurutvaPay, fintech company in India, trusted payment gateway India, digital payments provider India, merchant services India, UPI payment provider India, international PSP India, card processing company India, best online payment provider, Indian fintech solutions, RBI compliant payment gateway, secure payment processor India, India PSP solutions, who is GurutvaPay, Indian payment company, leading PSP India, merchant acquiring services India, fintech payment platform India, safe online transactions India, innovative payment solutions">
+
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="About GurutvaPay - Secure Online Payment Solution">
+    <meta property="og:description" content="GurutvaPay is a leading fintech company offering secure and reliable payment gateway services. Learn more about our mission and values.">
+    <meta property="og:image" content="{{ url_for('static', filename='img/GurutvaPay_logo.png', _external=True) }}">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:title" content="About GurutvaPay - Secure Online Payment Solution">
+    <meta name="twitter:description" content="GurutvaPay is a leading fintech company offering secure and reliable payment gateway services. Learn more about our mission and values.">
+
+    <!-- Canonical URL (Specific to About Page) -->
+    <link rel="canonical" href="https://www.gurutvapay.com/about">
+
+    {% endblock %}
+
+{% block title %}About Us - GurutvaPay{% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<main class="main">
+    <section class="banner banner-abt contact-p" alt="Business Data Presentation and Analysisf">
+        <div class="container">
+            <div class="banner-content">
+                <div class="text">
+                    <h3 data-aos="zoom-out" data-aos-delay="300">About GurutvaPay</h3>
+                    <h1 data-aos="zoom-out" data-aos-delay="400">Empowering Seamless Payments</h1>
+                    <p data-aos="zoom-out" data-aos-delay="500">At GurutvaPay, we are committed to revolutionizing
+                        digital payments with security, speed, and
+                        innovation.
+                        Experience effortless transactions and exclusive benefits as we simplify your financial journey
+                        like never before!</p>
+                    <a href="/contact" class="btn" data-aos="fade-up" data-aos-delay="600">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="row gy-4 align-items-center justify-content-between">
+
+                <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
+                    <span class="about-meta">About GurutvaPay </span>
+                        <h2 class="about-title">Empowering Businesses with Seamless Solutions </h2>
+                        <p class="about-description">
+                            As a Technology Service Provider (TSP) under the GurutvaPay DigiPayment division of Jaikalki
+                            Technology Pvt Ltd, we bridge the gap between merchants and financial institutions by
+                            connecting with multiple banks and PAPG companies to secure MID (Merchant IDs).
+                        </p>
+                        <p class="about-description">
+                            Our Pay-In Solution ensures seamless payment collection services, providing businesses with secure and efficient payment acceptance across multiple platforms.
+                        </p>
+
+
+                        <p class="about-description">
+                            We bridge the gap between businesses and their financial needs by offering seamless Pay In and Pay Out solutions through a network of trusted partners.
+
+                            Our expertise extends beyond payments, empowering clients with robust web and mobile app development and innovative API integration services.
+                        </p>
+                </div>
+
+                <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="image-wrapper">
+                        <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
+                            <img src="{{ url_for('static', filename='img/about-1.png') }}" alt="gurutvapay" class="img-fluid" />
+
+                        </div>
+                        <div class="experience-badge floating">
+                            <h3>3+ <span>Years</span></h3>
+                            <p>Of innovation and excellence</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="features-2" class="features-2 section">
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+            <!-- Section Title -->
+            <div class="section-title text-center  why-choose" data-aos="fade-up" data-aos-delay="100">
+                <h2>Why Choose GurutvaPay</h2>
+                <p>GurutvaPay is designed to offer businesses a seamless, secure, and efficient payment experience.</p>
+            </div><!-- End Section Title -->
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-4">
+
+                    <div class="feature-item text-end mb-5" data-aos="fade-right" data-aos-delay="200">
+                        <div class="d-flex align-items-center justify-content-end gap-4">
+                            <div class="feature-content">
+                                <h3>Fast & Secure Transactions</h3>
+                                <p>We use advanced encryption and fraud protection to keep your payments safe.</p>
+                            </div>
+                            <div class="feature-icon flex-shrink-0">
+                                <i class="bi bi-shield"></i>
+                            </div>
+                        </div>
+                    </div><!-- End .feature-item -->
+
+                    <div class="feature-item text-end mb-5" data-aos="fade-right" data-aos-delay="300">
+                        <div class="d-flex align-items-center justify-content-end gap-4">
+                            <div class="feature-content">
+                                <h3>Multiple Payment Options</h3>
+                                <p>Accept payments via UPI, credit/debit cards, net banking, and wallets.</p>
+                            </div>
+                            <div class="feature-icon flex-shrink-0">
+                                <i class="bi bi-credit-card"></i>
+                            </div>
+                        </div>
+                    </div><!-- End .feature-item -->
+
+                    <div class="feature-item text-end" data-aos="fade-right" data-aos-delay="400">
+                        <div class="d-flex align-items-center justify-content-end gap-4">
+                            <div class="feature-content">
+                                <h3>Seamless Integration</h3>
+                                <p>Easy API and plugin integration for websites and mobile applications.</p>
+                            </div>
+                            <div class="feature-icon flex-shrink-0">
+                                <i class="bi bi-code-slash"></i>
+                            </div>
+                        </div>
+                    </div><!-- End .feature-item -->
+
+                </div>
+
+                <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="phone-mockup text-center">
+                        <img src="{{ url_for('static', filename='img/about-2.png') }}" alt="gurutvapay" class="img-fluid" />
+
+                    </div>
+                </div><!-- End Phone Mockup -->
+
+                <div class="col-lg-4">
+
+                    <div class="feature-item mb-5" data-aos="fade-left" data-aos-delay="200">
+                        <div class="d-flex align-items-center gap-4">
+                            <div class="feature-icon flex-shrink-0">
+                                <i class="bi bi-bar-chart"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Real-Time Transaction Tracking</h3>
+                                <p>Monitor and manage all transactions with our user-friendly dashboard.</p>
+                            </div>
+                        </div>
+                    </div><!-- End .feature-item -->
+
+                    <div class="feature-item mb-5" data-aos="fade-left" data-aos-delay="300">
+                        <div class="d-flex align-items-center gap-4">
+                            <div class="feature-icon flex-shrink-0">
+                                <i class="bi bi-cash-stack"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Competitive Pricing</h3>
+                                <p>Transparent and cost-effective pricing to maximize your profits.</p>
+                            </div>
+                        </div>
+                    </div><!-- End .feature-item -->
+
+                    <div class="feature-item" data-aos="fade-left" data-aos-delay="400">
+                        <div class="d-flex align-items-center gap-4">
+                            <div class="feature-icon flex-shrink-0">
+                                <i class="bi bi-headset"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>24/7 Customer Support</h3>
+                                <p> Our dedicated support team is always available to assist you.</p>
+                            </div>
+                        </div>
+                    </div><!-- End .feature-item -->
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- /Features 2 Section -->
+
+    <!-- Features Cards Section -->
+    <section id="features-cards" class="features-cards section">
+
+        <div class="container">
+
+            <!-- Section Title -->
+            <div class="section-title why-choose" data-aos="fade-up">
+                <h2>Why Choose GurutvaPay for Its Services</h2>
+                <p>GurutvaPay offers a range of powerful payment solutions tailored for businesses of all sizes.</p>
+            </div><!-- End Section Title -->
+
+            <div class="row gy-4">
+
+                <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="feature-box orange">
+                        <i class="bi bi-credit-card-2-front"></i>
+                        <h4>Payment Solution</h4>
+                        <p>Our Payment Solution streamline your payment acceptance, ensuring quick and secure transactions across multiple platforms.
+
+</p>
+                    </div>
+                </div><!-- End Feature Box -->
+
+                <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="feature-box blue">
+                        <i class="bi bi-phone"></i>
+                        <h4>UPI & QR Payments</h4>
+                        <p>Enable hassle-free transactions with instant UPI and QR code-based payments.</p>
+                    </div>
+                </div><!-- End Feature Box -->
+
+                <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="feature-box green">
+                        <i class="bi bi-cash-coin"></i>
+                        <h4>Payment Disbursement</h4>
+                        <p>Seamless bulk payouts to vendors, employees, and partners with high-speed processing.</p>
+                    </div>
+                </div><!-- End Feature Box -->
+
+                <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="feature-box red">
+                        <i class="bi bi-shield-lock"></i>
+                        <h4>Fraud Protection & Security</h4>
+                        <p>Advanced fraud detection and encryption to safeguard every transaction.</p>
+                    </div>
+                </div><!-- End Feature Box -->
+
+            </div>
+
+        </div>
+
+    </section><!-- /Features Cards Section -->
+
+
+</main>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+
+{% endblock javascripts %}

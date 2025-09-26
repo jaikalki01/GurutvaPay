@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- RSS version declaration -->
+<rss version="2.0">
+
+  <!-- Channel section contains general information about your site/blog -->
+  <channel>
+    <title>GurutvaPay Blog</title> <!-- Name of your blog or website -->
+    <link>https://www.gurutvapay.com/blog</link> <!-- Main blog page URL -->
+    <description>Latest updates and articles from GurutvaPay</description> <!-- Short description of your site -->
+    <language>en-us</language> <!-- Language of the feed -->
+    <lastBuildDate>Sun, 31 Aug 2025 10:00:00 +0000</lastBuildDate> <!-- Last updated date -->
+
+    <!-- Each <item> represents one blog post -->
+    <item>
+      <title>Benefits of UPI for Small Businesses</title> <!-- Blog post title -->
+      <link>https://www.gurutvapay.com/blog/Benefits_of_upi_small_business_benefits</link> <!-- Blog post URL -->
+
+      <!-- Description can include HTML inside <![CDATA[ ... ]]> -->
+      <description><![CDATA[
+        <img src="https://www.gurutvapay.com/static/img/blog/blog-1.jpg" alt="UPI for Small Businesses" style="width:100%;max-width:600px;" />
+        <p>The Unified Payments Interface (UPI) has revolutionized the way small businesses handle transactions in India. By offering instant, cashless payments, UPI has become a vital tool in the digital economy.</p>
+      ]]></description>
+
+      <guid>https://www.gurutvapay.com/blog/Benefits_of_upi_small_business_benefits</guid> <!-- Unique identifier for the post -->
+      <pubDate>Tue, 15 Jul 2025 10:00:00 +0000</pubDate> <!-- Date the post was published -->
+    </item>
+
+    <!-- Add more <item> blocks here for additional blog posts -->
+
+  </channel>
+</rss>
